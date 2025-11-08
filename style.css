@@ -55,12 +55,13 @@ p {
 }
 
 a {
-    color: var(--color10);
-    text-decoration: none;
+    color: var(--color90);
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 a:hover {
-    color: var(--color30);
+    color: var(--color100);
 }
 
 .btn,
