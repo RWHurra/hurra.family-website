@@ -2,11 +2,11 @@ class THeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <header>
-            <span>hamburger</span>
+            <span>hurra.family</span>
             <nav>
-                <a href="#">Slot 1</a>
-                <a href="#">Slot 2</a>
-                <a href="#">Slot 3</a>
+                <a href="#">home</a>
+                <a href="./robert">robert</a>
+                <a href="#">jovana</a>
             </nav>
         </header>
         `;
