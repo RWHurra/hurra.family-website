@@ -10,7 +10,7 @@ class THeader extends HTMLElement {
                 <path class="path" d="${THeader.PATH_OPEN}"/>
             </svg>
             <nav>
-                <a href="/">home</a>
+                <a href="//hurra.family">home</a>
                 <a href="//robert.hurra.family">robert</a>
                 <a href="#">jovana</a>
             </nav>
