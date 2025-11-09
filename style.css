@@ -295,10 +295,11 @@ t-card .card-base {
     padding: var(--spacing3);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 t-card .card-base:hover {
     /* 1. Lyft kortet vertikalt (rör sig 5px uppåt) */
-    transform: translateY(-5px); 
-    box-shadow: 0 5px 25px var(--color30); 
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px var(--color30);
 }
 
 /* CARD HEADING (Översta delen) */
@@ -385,7 +386,7 @@ t-card .card-base:hover {
 
 /* footer */
 footer {
-    background: var(--accent);
+    background: var(--color20);
     padding: var(--spacing5) 0 var(--spacing6) 0;
 }
 
@@ -413,8 +414,14 @@ footer {
 .social-media-icons {
     display: flex;
     gap: var(--spacing4);
+    fill: var(--accent);
+}
+.social-media-icons a:hover {
+    fill: var(--color100);
+    transition: fill 0.3s ease-in-out;
 }
 
 .social-media {
-    width: 32px;
+    width: 64px;
+    color: var(--accent);
 }
