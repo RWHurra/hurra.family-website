@@ -186,6 +186,7 @@ header {
     justify-content: space-between;
     position: relative;
     padding: var(--spacing4) 0;
+    background-color: var(--color10);
 }
 
 nav {
@@ -214,7 +215,7 @@ nav {
         position: absolute;
         top: var(--spacing6);
         right: 0px;
-        background: var(--accent);
+        background: var(--color30);
         padding: var(--spacing4);
         gap: var(--spacing4);
         border-radius: var(--spacing2);
