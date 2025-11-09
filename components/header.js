@@ -11,7 +11,7 @@ class THeader extends HTMLElement {
             </svg>
             <nav>
                 <a href="/">home</a>
-                <a href="/robert/">robert</a>
+                <a href="//robert.hurra.family">robert</a>
                 <a href="#">jovana</a>
             </nav>
         </header>
