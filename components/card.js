@@ -11,7 +11,22 @@ class TCard extends HTMLElement {
 
             bulletsHTML = `<ul>`;
             bulletItems.forEach(item => {
-                bulletsHTML += `<li>${item.trim()}</li>`;
+                let trimmedItem = item.trim();
+                let listItemContent = trimmedItem;
+
+                // Hitta positionen för kolon (:) för att dela upp nyckel/värde
+                const colonIndex = trimmedItem.indexOf(':');
+
+                if (colonIndex > 0) {
+                    // Dela upp i nyckel och värde
+                    const key = trimmedItem.substring(0, colonIndex).trim();
+                    const value = trimmedItem.substring(colonIndex + 1).trim();
+
+                    // Använd <strong> för nyckelordet
+                    listItemContent = `<strong>${key}:</strong> ${value}`;
+                }
+
+                bulletsHTML += `<li>${listItemContent}</li>`;
             });
             bulletsHTML += `</ul>`;
         }
