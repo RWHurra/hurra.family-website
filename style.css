@@ -16,8 +16,10 @@
     --highlight: hsl(184 49% 31%);
     --border: hsl(183 100% 16%);
     --border-muted: hsl(184 100% 7%);
-    --primary: hsl(184 54% 57%); /* Huvudaccentfärg (Turkos) */
-    --secondary: hsl(2 67% 75%); /* Sekundär kontrastfärg (Rosa/Röd) */
+    --primary: hsl(184 54% 57%);
+    /* Huvudaccentfärg (Turkos) */
+    --secondary: hsl(2 67% 75%);
+    /* Sekundär kontrastfärg (Rosa/Röd) */
     --danger: hsl(9 37% 65%);
     --warning: hsl(52 26% 54%);
     --success: hsl(147 24% 57%);
@@ -46,8 +48,10 @@ html {
 body {
     text-wrap: balance;
     font: var(--p);
-    background: var(--bg); /* Ersatt var(--color10) */
-    color: var(--text); /* Ersatt var(--color90) */
+    background: var(--bg);
+    /* Ersatt var(--color10) */
+    color: var(--text);
+    /* Ersatt var(--color90) */
 }
 
 h1 {
@@ -64,13 +68,15 @@ p {
 }
 
 a {
-    color: var(--text); /* Ersatt var(--color90) */
+    color: var(--text);
+    /* Ersatt var(--color90) */
     text-decoration: underline;
     text-underline-offset: 4px;
 }
 
 a:hover {
-    color: var(--primary); /* Ersatt var(--color100) - Använder nu Primary accent */
+    color: var(--primary);
+    /* Ersatt var(--color100) - Använder nu Primary accent */
 }
 
 .btn,
@@ -78,18 +84,22 @@ button {
     all: unset;
     display: inline-block;
     margin: var(--spacing2) 0;
-    background: var(--text); /* Ersatt var(--color100) */
+    background: var(--text);
+    /* Ersatt var(--color100) */
     padding: var(--spacing2) var(--spacing3);
-    color: var(--bg); /* Ersatt var(--color10) */
+    color: var(--bg);
+    /* Ersatt var(--color10) */
     border-radius: var(--spacing2);
-    border-bottom: solid var(--spacing1) var(--primary); /* Ersatt var(--accent) */
+    border-bottom: solid var(--spacing1) var(--primary);
+    /* Ersatt var(--accent) */
     font: var(--p);
     cursor: pointer;
 }
 
 .btn:hover,
 button:hover {
-    background: linear-gradient(180deg, var(--text), var(--text-muted)); /* Ersatt var(--color100), var(--color90) */
+    background: linear-gradient(180deg, var(--text), var(--text-muted));
+    /* Ersatt var(--color100), var(--color90) */
     transition: 0.3s ease-in-out;
 }
 
@@ -195,7 +205,30 @@ header {
     justify-content: space-between;
     position: relative;
     padding: var(--spacing4) 0;
-    background-color: var(--bg); /* Ersatt var(--color10) */
+    background-color: var(--bg);
+    /* Ersatt var(--color10) */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing3);
+    flex-grow: 1;
+}
+
+.site-icon-container {
+    display: flex;
+    align-items: center;
+    fill: var(--primary);
+}
+
+.site-icon {
+    width: 32px;
+    transition: fill 0.3s ease-in-out;
+}
+
+.site-icon-container:hover {
+    fill: var(--text);
 }
 
 nav {
@@ -225,7 +258,8 @@ nav {
         position: absolute;
         top: var(--spacing6);
         right: 0px;
-        background: var(--highlight); /* Ersatt var(--color30) */
+        background: var(--highlight);
+        /* Ersatt var(--color30) */
         padding: var(--spacing4);
         gap: var(--spacing4);
         border-radius: var(--spacing2);
@@ -241,7 +275,8 @@ nav {
     margin: var(--spacing7) auto var(--spacing6) auto;
     text-align: center;
     padding: var(--spacing6) 0;
-    background: var(--primary); /* Ersatt var(--accent) */
+    background: var(--primary);
+    /* Ersatt var(--accent) */
 }
 
 .main-section h2 {
@@ -253,7 +288,8 @@ nav {
     /* background-color: var(--color20); */
     background-image: linear-gradient(to bottom,
             /* Riktning: Tona nedåt */
-            var(--bg-light) 0%, /* Ersatt var(--color20) */
+            var(--bg-light) 0%,
+            /* Ersatt var(--color20) */
             /* Startar med full färg vid 0% (toppen) */
             transparent 100%
             /* Slutar med genomskinlig vid 100% (botten) */
@@ -298,11 +334,14 @@ t-card .card-base {
     height: 100%;
 
     /* Kortets utseende */
-    background-color: var(--highlight); /* Ersatt var(--color30) */
-    color: var(--text); /* Ersatt var(--color90) */
+    background-color: var(--highlight);
+    /* Ersatt var(--color30) */
+    color: var(--text);
+    /* Ersatt var(--color90) */
     /* border: 2px solid var(--accent); */
     border-radius: var(--spacing4);
-    box-shadow: 10px 5px 5px var(--bg-dark); /* Ersatt var(--color10) */
+    box-shadow: 10px 5px 5px var(--bg-dark);
+    /* Ersatt var(--color10) */
     padding: var(--spacing3);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -310,14 +349,16 @@ t-card .card-base {
 t-card .card-base:hover {
     /* 1. Lyft kortet vertikalt (rör sig 5px uppåt) */
     transform: translateY(-5px);
-    box-shadow: 0 5px 25px var(--highlight); /* Ersatt var(--color30) */
+    box-shadow: 0 5px 25px var(--highlight);
+    /* Ersatt var(--color30) */
 }
 
 /* CARD HEADING (Översta delen) */
 .card-heading {
     /* Ingen specifik stil behövs här, tar upp den plats som H2 behöver */
     padding-bottom: var(--spacing3);
-    border-bottom: 1px solid var(--primary); /* Ersatt var(--accent) */
+    border-bottom: 1px solid var(--primary);
+    /* Ersatt var(--accent) */
     /* Visuell separation */
 }
 
@@ -326,7 +367,8 @@ t-card .card-base:hover {
     /* Använder din definierade variabel */
     margin: 0;
     /* Nollställer marginaler för rubriken inuti kortet */
-    color: var(--text); /* Ersatt var(--color100) */
+    color: var(--text);
+    /* Ersatt var(--color100) */
     /* Accentfärg på rubriken */
     font-weight: 400;
 }
@@ -362,14 +404,16 @@ t-card .card-base:hover {
     /* Utrymme för ikonen till vänster (20px) */
     position: relative;
     /* Färg för listtexten inuti kortet (som har en mörk bakgrund) */
-    color: var(--text); /* Ersatt var(--color90) */
+    color: var(--text);
+    /* Ersatt var(--color90) */
 }
 
 /* 3. LI ICON (Använder din accentfärg) */
 .card-details li::before {
     content: "→ ";
     /* Sätter ikonen till din definierade accentfärg */
-    color: var(--primary); /* Ersatt var(--accent) */
+    color: var(--primary);
+    /* Ersatt var(--accent) */
     position: absolute;
     left: 0;
     font-weight: 1000;
@@ -377,7 +421,8 @@ t-card .card-base:hover {
 
 /* Om du använder <strong>-taggar inuti <li> för att betona text */
 .card-details li strong {
-    color: var(--text); /* Ersatt var(--color100) */
+    color: var(--text);
+    /* Ersatt var(--color100) */
     font-weight: 600;
 }
 
@@ -397,7 +442,8 @@ t-card .card-base:hover {
 
 /* footer */
 footer {
-    background: var(--bg-light); /* Ersatt var(--color20) */
+    background: var(--bg-light);
+    /* Ersatt var(--color20) */
     padding: var(--spacing5) 0 var(--spacing6) 0;
 }
 
@@ -425,14 +471,18 @@ footer {
 .social-media-icons {
     display: flex;
     gap: var(--spacing4);
-    fill: var(--primary); /* Ersatt var(--accent) */
+    fill: var(--primary);
+    /* Ersatt var(--accent) */
 }
+
 .social-media-icons a:hover {
-    fill: var(--text); /* Ersatt var(--color100) */
+    fill: var(--text);
+    /* Ersatt var(--color100) */
     transition: fill 0.3s ease-in-out;
 }
 
 .social-media {
     width: 64px;
-    color: var(--primary); /* Ersatt var(--accent) */
+    color: var(--primary);
+    /* Ersatt var(--accent) */
 }
