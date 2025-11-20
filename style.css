@@ -17,9 +17,7 @@
     --border: hsl(183 100% 16%);
     --border-muted: hsl(184 100% 7%);
     --primary: hsl(184 54% 57%);
-    /* Huvudaccentfärg (Turkos) */
     --secondary: hsl(2 67% 75%);
-    /* Sekundär kontrastfärg (Rosa/Röd) */
     --danger: hsl(9 37% 65%);
     --warning: hsl(52 26% 54%);
     --success: hsl(147 24% 57%);
@@ -29,6 +27,7 @@
     --ff: "Inter", serif;
     --ff2: "Inter", serif;
     --p: 1rem/1.5em var(--ff);
+    --p-bold: 600 1rem/1.5em var(--ff);
     --h1: 600 3rem/1.2em var(--ff2);
     --h2: 600 2rem/1.2em var(--ff2);
     --spacing1: 4px;
