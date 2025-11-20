@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Hurra | Utveckling & Labbar</title>
+    <title>Test Hero-component | Utveckling & Labbar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,18 @@
     <script src="/components/footer.js" defer></script>
     <script src="/components/hero.js" defer></script>
     <t-header> </t-header>
-    <t-hero></t-hero>
+    <t-hero>
+        <h1 slot="hero-title">välkommen till hurra.family</h1>
+        <h2 slot="hero-heading">aktiv sedan 2025-11</h2>
+
+        <p slot="hero-body">vi är en familj som bor i Solna</p>
+        <p slot="hero-body">denna domän är främst för experimentering med homelab</p>
+        <p slot="hero-body">här kan du hitta allmän information om oss</p>
+
+        <a slot="hero-action" href="/about.html" class="cta cta-primary">vilka är vi?</a>
+        <a slot="hero-action" href="/projects.html" class="cta cta-secondary">hur når du oss?</a>
+
+    </t-hero>
     <t-footer> </t-footer>
 </body>
 
