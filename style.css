@@ -25,7 +25,7 @@
 
     /* BEHÅLLDA TYPOGRAFI & SPACING */
     --ff: "Inter", serif;
-    --ff2: "Inter", serif;
+    --ff2: "Science Gothic", serif;
     --p: 1rem/1.5em var(--ff);
     --p-bold: 600 1rem/1.5em var(--ff);
     --h1: 600 3rem/1.2em var(--ff2);
