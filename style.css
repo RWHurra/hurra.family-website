@@ -25,7 +25,7 @@
 
     /* BEHÅLLDA TYPOGRAFI & SPACING */
     --ff: "Inter", serif;
-    --ff2: "Inter", serif;
+    --ff2: "Science Gothic", serif;
     --p: 1rem/1.5em var(--ff);
     --p-bold: 600 1rem/1.5em var(--ff);
     --h1: 600 3rem/1.2em var(--ff2);
@@ -437,51 +437,4 @@ t-card .card-base:hover {
         gap: var(--spacing3);
         /* Mindre mellanrum på små skärmar */
     }
-}
-
-/* footer */
-footer {
-    background: var(--bg-light);
-    /* Ersatt var(--color20) */
-    padding: var(--spacing5) 0 var(--spacing6) 0;
-}
-
-.footer {
-    width: 90%;
-    max-width: 1080px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-@media (max-width: 600px) {
-    .footer {
-        flex-direction: column;
-        gap: var(--spacing4);
-    }
-}
-
-.footer-right,
-.footer-left {
-    display: flex;
-    flex-direction: column;
-}
-
-.social-media-icons {
-    display: flex;
-    gap: var(--spacing4);
-    fill: var(--primary);
-    /* Ersatt var(--accent) */
-}
-
-.social-media-icons a:hover {
-    fill: var(--text);
-    /* Ersatt var(--color100) */
-    transition: fill 0.3s ease-in-out;
-}
-
-.social-media {
-    width: 64px;
-    color: var(--primary);
-    /* Ersatt var(--accent) */
 }
