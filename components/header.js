@@ -6,24 +6,25 @@ class THeader extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
+        <link rel="stylesheet" href="/components/header.css">
         <header>
-        <div class="nav-left">
-            <div class="site-icon-container">
-                <a href="//${THeader.activeSubdomain}.hurra.family">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="site-icon">
-                        <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                        <path d="${THeader.PATH_HOUSE}"/>
-                    </svg>
-                </a>
+            <div class="nav-left">
+                <div class="site-icon-container">
+                    <a href="//${THeader.activeSubdomain}.hurra.family">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="site-icon">
+                            <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path d="${THeader.PATH_HOUSE}"/>
+                        </svg>
+                    </a>
+                </div>
+                <span class="subdomain-links">
+                    <a href="//hurra.family">hurra.family</a>
+                    /
+                    <a href="//robert.hurra.family">robert</a>
+                    /
+                    <a href="#">jovana</a>
+                </span>
             </div>
-            <span class="subdomain-links">
-                <a href="//hurra.family">hurra.family</a>
-                /
-                <a href="//robert.hurra.family">robert</a>
-                /
-                <a href="//#">jovana</a>
-            </span>
-        </div>
 
             <nav class="site-nav">
                 <a href="//hurra.family">home</a>
