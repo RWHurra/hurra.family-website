@@ -32,38 +32,7 @@ t-hero::part(cta-buttons) {
 
 }
 
-.cta {
-    padding: var(--spacing4) var(--spacing5);
-    text-decoration: none;
-    border-radius: var(--spacing4);
-    font: var(--p-bold);
-    transition: background-color 0.3s;
-    text-align: center;
-}
-
-.cta-primary {
-    background-color: var(--primary);
-    color: var(--bg-light);
-    border: 2px solid var(--border);
-}
-
-.cta-primary:hover {
-    background-color: var(--highlight);
-    color: var(--text);
-}
-
-
-.cta-secondary {
-    color: var(--text-muted);
-    border: 2px solid var(--border);
-}
-
-.cta-secondary:hover {
-    background-color: var(--highlight);
-    color: white;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     t-hero::part(cta-buttons) {
         flex-direction: column;
     }
