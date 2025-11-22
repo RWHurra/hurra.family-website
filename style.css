@@ -37,6 +37,7 @@
     --spacing5: 40px;
     --spacing6: 80px;
     --spacing7: 160px;
+    --media-width: 768px;
 }
 
 /* Global Styles */
@@ -76,6 +77,38 @@ a {
 a:hover {
     color: var(--primary);
     /* Ersatt var(--color100) - Använder nu Primary accent */
+}
+
+/* buttons */
+.cta {
+    padding: var(--spacing4) var(--spacing5);
+    text-decoration: none;
+    border-radius: var(--spacing4);
+    font: var(--p-bold);
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.cta-primary {
+    background-color: var(--highlight);
+    color: var(--text);
+    border: 2px solid var(--border);
+}
+
+.cta-primary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+
+.cta-secondary {
+    color: var(--text-muted);
+    border: 2px solid var(--border);
+}
+
+.cta-secondary:hover {
+    background-color: var(--primary);
+    color: white;
 }
 
 .btn,
@@ -224,142 +257,4 @@ section {
 .section-heading {
     text-align: center;
     margin-bottom: var(--spacing5);
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* Tillåter korten att bryta rad */
-    justify-content: center;
-    /* Centrerar korten i raden */
-    gap: var(--spacing5);
-    /* Utrymme mellan korten (16px i ditt system) */
-    margin: var(--spacing4);
-}
-
-/* card */
-t-card {
-    display: block;
-    /* Viktigt för att kortet ska ta plats i flex-containern */
-    /* flex-basis: Styr den föredragna storleken. 
-       flex-grow: 1 gör att de expanderar för att fylla raden jämnt.
-       flex-shrink: 1 tillåter dem att krympa.
-    */
-    flex: 1 1 300px;
-    /* Standard: Försök vara minst 350px bred */
-    min-height: 100%;
-}
-
-/* Kortets yttre ram (där border och bakgrund hamnar) */
-t-card .card-base {
-    display: flex;
-    flex-direction: column;
-    /* Staplar H2 och P vertikalt */
-    height: 100%;
-
-    /* Kortets utseende */
-    background-color: var(--highlight);
-    /* Ersatt var(--color30) */
-    color: var(--text);
-    /* Ersatt var(--color90) */
-    /* border: 2px solid var(--accent); */
-    border-radius: var(--spacing4);
-    box-shadow: 10px 5px 5px var(--bg-dark);
-    /* Ersatt var(--color10) */
-    padding: var(--spacing3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-t-card .card-base:hover {
-    /* 1. Lyft kortet vertikalt (rör sig 5px uppåt) */
-    transform: translateY(-5px);
-    box-shadow: 0 5px 25px var(--highlight);
-    /* Ersatt var(--color30) */
-}
-
-/* CARD HEADING (Översta delen) */
-.card-heading {
-    /* Ingen specifik stil behövs här, tar upp den plats som H2 behöver */
-    padding-bottom: var(--spacing3);
-    border-bottom: 1px solid var(--primary);
-    /* Ersatt var(--accent) */
-    /* Visuell separation */
-}
-
-.card-heading h2 {
-    font-size: var(--h2);
-    /* Använder din definierade variabel */
-    margin: 0;
-    /* Nollställer marginaler för rubriken inuti kortet */
-    color: var(--text);
-    /* Ersatt var(--color100) */
-    /* Accentfärg på rubriken */
-    font-weight: 400;
-}
-
-/* CARD DETAILS (Nedersta delen) */
-.card-details {
-    flex-grow: 1;
-    /* Låter detaljerna ta upp allt återstående utrymme */
-    padding-top: var(--spacing3);
-}
-
-/* Minska marginalen mellan <p> och <ul> i .card-details */
-.card-details p {
-    margin-bottom: var(--spacing3);
-    /* 16px mellan <p> och <ul> (din befintliga är var(--spacing2)) */
-}
-
-/* 1. UL (Nollställning av listan) */
-.card-details ul {
-    list-style: none;
-    /* Tar bort standardprickar */
-    padding: 0;
-    margin-top: var(--spacing3);
-    /* Mellanrum mellan <p> och <ul> */
-    margin-bottom: 0;
-}
-
-/* 2. LI (Lista-objekt) */
-.card-details li {
-    margin-bottom: var(--spacing2);
-    /* 8px mellan varje lista-objekt */
-    padding-left: var(--spacing4);
-    /* Utrymme för ikonen till vänster (20px) */
-    position: relative;
-    /* Färg för listtexten inuti kortet (som har en mörk bakgrund) */
-    color: var(--text);
-    /* Ersatt var(--color90) */
-}
-
-/* 3. LI ICON (Använder din accentfärg) */
-.card-details li::before {
-    content: "→ ";
-    /* Sätter ikonen till din definierade accentfärg */
-    color: var(--primary);
-    /* Ersatt var(--accent) */
-    position: absolute;
-    left: 0;
-    font-weight: 1000;
-}
-
-/* Om du använder <strong>-taggar inuti <li> för att betona text */
-.card-details li strong {
-    color: var(--text);
-    /* Ersatt var(--color100) */
-    font-weight: 600;
-}
-
-@media (max-width: 768px) {
-
-    /* När skärmen är liten, låt korten ta upp 100% av bredden på raden */
-    t-card {
-        /* flex-basis: 100% - betyder att den vill vara 100% av förälderns bredd */
-        flex: 1 1 100%;
-    }
-
-    .card-container {
-        gap: var(--spacing3);
-        /* Mindre mellanrum på små skärmar */
-    }
 }
