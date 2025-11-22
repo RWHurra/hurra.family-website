@@ -1,0 +1,107 @@
+t-card-grid::part(card-grid) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing5);
+    margin: var(--spacing6) auto;
+    width: 90%;
+    max-width: 1080px;
+}
+
+t-card {
+    display: block;
+    width: 90%;
+    margin: var(--spacing6) auto;
+    max-width: 800px;
+    min-height: 100%;
+}
+
+t-card-grid t-card {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    flex: 1 1 400px;
+}
+
+t-card::part(card-base) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--bg-light);
+    color: var(--text);
+    border-radius: var(--spacing4);
+    box-shadow: 10px 5px 5px var(--bg-dark);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+t-card::part(card-base):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px var(--highlight);
+}
+
+t-card::part(card-content) {
+    flex-grow: 1;
+    padding-top: var(--spacing4);
+    padding-left: var(--spacing5);
+}
+
+t-card::part(card-header) {
+    padding-top: var(--spacing5);
+    padding-bottom: var(--spacing2);
+    padding-left: var(--spacing5);
+    border-bottom: 1px solid var(--primary);
+}
+
+t-card::part(card-title) {
+    font-size: var(--h2);
+    margin: 0;
+    color: var(--text);
+    font-weight: 400;
+}
+
+t-card::part(card-body) {
+    padding-bottom: var(--spacing2);
+}
+
+t-card::part(card-bullets) {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+t-card::part(card-footer) {
+    padding-top: var(--spacing5);
+    padding-bottom: var(--spacing5);
+}
+
+t-card::part(cta-buttons) {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing6);
+}
+
+t-card li {
+    margin-bottom: var(--spacing2);
+    padding-left: var(--spacing4);
+    position: relative;
+    color: var(--text);
+}
+
+t-card li::before {
+    content: "→ ";
+    color: var(--secondary);
+    position: absolute;
+    left: 0;
+    font-weight: 1000;
+}
+
+@media (max-width: 768px) {
+    t-card {
+        flex: 1 1 100%;
+    }
+
+    t-card-grid::part(card-grid) {
+        gap: var(--spacing6);
+    }
+}
