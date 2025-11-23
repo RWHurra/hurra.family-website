@@ -117,13 +117,10 @@ button {
     display: inline-block;
     margin: var(--spacing2) 0;
     background: var(--text);
-    /* Ersatt var(--color100) */
     padding: var(--spacing2) var(--spacing3);
     color: var(--bg);
-    /* Ersatt var(--color10) */
     border-radius: var(--spacing2);
     border-bottom: solid var(--spacing1) var(--primary);
-    /* Ersatt var(--accent) */
     font: var(--p);
     cursor: pointer;
 }
@@ -131,7 +128,6 @@ button {
 .btn:hover,
 button:hover {
     background: linear-gradient(180deg, var(--text), var(--text-muted));
-    /* Ersatt var(--color100), var(--color90) */
     transition: 0.3s ease-in-out;
 }
 
@@ -225,36 +221,4 @@ section {
 
 .margin7 {
     margin: var(--spacing7) auto;
-}
-
-/* main section */
-.main-section {
-    margin: var(--spacing7) auto var(--spacing6) auto;
-    text-align: center;
-    padding: var(--spacing6) 0;
-    background: var(--primary);
-    /* Ersatt var(--accent) */
-}
-
-.main-section h2 {
-    font: var(--h1);
-}
-
-.section-wrapper {
-    padding: var(--spacing6) 0;
-    /* background-color: var(--color20); */
-    background-image: linear-gradient(to bottom,
-            /* Riktning: Tona nedåt */
-            var(--bg-light) 0%,
-            /* Ersatt var(--color20) */
-            /* Startar med full färg vid 0% (toppen) */
-            transparent 100%
-            /* Slutar med genomskinlig vid 100% (botten) */
-        );
-    margin-bottom: var(--spacing5);
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: var(--spacing5);
 }

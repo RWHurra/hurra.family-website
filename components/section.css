@@ -1,0 +1,32 @@
+t-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: var(--spacing6) 0;
+}
+
+t-section::part(section-wrapper) {
+    width: 90%;
+    padding: var(--spacing6) 0;
+    background-image: linear-gradient(to bottom,
+            var(--bg-light) 0%,
+            transparent 100%);
+    margin: 0 auto;
+}
+
+t-section::part(section-header) {
+    text-align: center;
+    margin-bottom: var(--spacing5);
+}
+
+t-section::part(section-title) {
+    padding-bottom: var(--spacing4);
+}
+
+t-section p[slot="section-body"] {
+    max-width: 800px; 
+    margin: 0 auto;
+    text-align: center;
+}
