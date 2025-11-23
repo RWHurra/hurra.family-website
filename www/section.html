@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Hero-component | Utveckling & Labbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/card.js" defer></script>
+    <script src="/components/card-grid.js" defer></script>
+    <script src="/components/section.js" defer></script>
+
+    <t-header> </t-header>
+    <t-section>
+        <h2 slot="section-title">sektionstitel</h2>
+        <p slot="section-description">sektionens beskrivning</p>
+        <p slot="section-body">sektionstext och innehåll</p>
+    </t-section>
+
+    <t-section>
+        <h2 slot="section-title">sektionstitel</h2>
+        <p slot="section-description">sektionens beskrivning</p>
+        <div slot="section-body">
+            <t-card>
+                <h2 slot="card-title">title</h2>
+                <p slot="card-body">body</p>
+
+                <li slot="card-bullet">bullet</li>
+
+            </t-card>
+        </div>
+    </t-section>
+
+    <t-section>
+        <h2 slot="section-title">sektionstitel</h2>
+        <p slot="section-description">sektionens beskrivning</p>
+        <div slot="section-body">
+            <t-card-grid>
+                <t-card>
+                    <h2 slot="card-title">title</h2>
+                    <p slot="card-body">body</p>
+
+                    <li slot="card-bullet">bullet</li>
+
+                </t-card>
+                <t-card>
+                    <h2 slot="card-title">title</h2>
+                    <p slot="card-body">body</p>
+
+                    <li slot="card-bullet">bullet</li>
+
+                </t-card>
+                <t-card>
+                    <h2 slot="card-title">title</h2>
+                    <p slot="card-body">body</p>
+
+                    <li slot="card-bullet">bullet</li>
+
+                </t-card>
+            </t-card-grid>
+        </div>
+    </t-section>
+
+    <t-card>
+        <h2 slot="card-title">välkommen till hurra.family</h2>
+        <p slot="card-body">aktiv sedan 2025-11</p>
+
+        <li slot="card-bullet">vi är en familj som bor i Solna</li>
+        <li slot="card-bullet">denna domän är främst för experimentering med homelab</li>
+        <li slot="card-bullet">här kan du hitta allmän information om oss</li>
+
+        <a slot="card-action" href="/about.html" class="cta cta-primary">vilka är vi?</a>
+        <a slot="card-action" href="/projects.html" class="cta cta-secondary">hur når du oss?</a>
+    </t-card>
+    <t-card-grid>
+        <t-card>
+            <h2 slot="card-title">välkommen till hurra.family</h2>
+            <p slot="card-body">aktiv sedan 2025-11</p>
+
+            <li slot="card-bullet">vi är en familj som bor i Solna</li>
+            <li slot="card-bullet">denna domän är främst för experimentering med homelab</li>
+            <li slot="card-bullet">här kan du hitta allmän information om oss</li>
+
+            <a slot="card-action" href="/about.html" class="cta cta-primary">vilka är vi?</a>
+            <a slot="card-action" href="/projects.html" class="cta cta-secondary">hur når du oss?</a>
+
+        </t-card>
+
+        <t-card>
+            <h2 slot="card-title">title</h2>
+            <p slot="card-body">body</p>
+
+            <li slot="card-bullet">bullet</li>
+
+            <a slot="card-action" href="/about.html" class="cta cta-primary">action</a>
+
+        </t-card>
+
+        <t-card>
+            <h2 slot="card-title">title</h2>
+            <p slot="card-body">body</p>
+
+            <li slot="card-bullet">bullet</li>
+
+            <a slot="card-action" href="/about.html" class="cta cta-primary">action</a>
+
+        </t-card>
+
+        <t-card>
+            <h2 slot="card-title">title</h2>
+            <p slot="card-body">body</p>
+
+            <li slot="card-bullet">bullet</li>
+
+            <a slot="card-action" href="/about.html" class="cta cta-primary">action</a>
+
+        </t-card>
+
+        <t-card>
+            <h2 slot="card-title">title</h2>
+            <p slot="card-body">body</p>
+
+            <li slot="card-bullet">bullet</li>
+
+        </t-card>
+    </t-card-grid>
+    <t-footer> </t-footer>
+</body>
+
+</html>
