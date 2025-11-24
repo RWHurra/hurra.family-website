@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Hurra | Homelab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/section.js" defer></script>
+    <script src="/components/card.js" defer></script>
+    <script src="/components/card-grid.js" defer></script>
+
+    <t-header> </t-header>
+    <t-section>
+        <h1 slot="section-title">🖥</h1>
+        <h2 slot="section-description">homelab</h2>
+
+        <div slot="section-body">
+            <t-card-grid>
+                <t-card>
+                    <h2 slot="card-title">virtualization</h2>
+                    <p slot="card-body">i brist på hårdvara har jag mycket virtualiseringar</p>
+                    <li slot="card-bullet">proxmox virtual environment</li>
+                    <li slot="card-bullet">proxmox backup server</li>
+                    <li slot="card-bullet">ubuntu server</li>
+                    <li slot="card-bullet">home assistant OS</li>
+                    <li slot="card-bullet">docker compose</li>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">containers</h2>
+                    <p slot="card-body">alla tjänster är via docker compose</p>
+                    <li slot="card-bullet">adguard home</li>
+                    <li slot="card-bullet">nginx proxy manager</li>
+                    <li slot="card-bullet">wireguard</li>
+                    <li slot="card-bullet">vaultwarden</li>
+                    <li slot="card-bullet">...</li>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">automation</h2>
+                    <p slot="card-body">jag försöker automatisera och re-use där jag kan</p>
+                    <li slot="card-bullet">home assistant</li>
+                    <li slot="card-bullet">js web components</li>
+                    <li slot="card-bullet">scripts</li>
+                </t-card>
+
+            </t-card-grid>
+        </div>
+    </t-section>
+    <t-footer> </t-footer>
+</body>
+
+</html>
