@@ -1,0 +1,39 @@
+/* ====================================
+   T-HERO COMPONENT STYLING
+   ==================================== */
+
+t-hero {
+    display: block;
+    width: 90%;
+    max-width: 1080px;
+    margin: var(--spacing6) auto;
+}
+
+t-hero::part(hero-title) {
+    margin-top: var(--spacing7);
+    margin-bottom: var(--spacing3);
+}
+
+t-hero::part(hero-heading) {
+    color: var(--text-muted);
+    margin-top: var(--spacing5);
+    margin-bottom: var(--spacing6);
+}
+
+t-hero::part(hero-body-wrapper) {
+    margin-bottom: var(--spacing5);
+    color: var(--text);
+}
+
+t-hero::part(cta-buttons) {
+    display: flex;
+    margin-top: var(--spacing6);
+    gap: var(--spacing6);
+
+}
+
+@media (max-width: 768px) {
+    t-hero::part(cta-buttons) {
+        flex-direction: column;
+    }
+}

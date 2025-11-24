@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hurra.family om oss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/section.js" defer></script>
+    <script src="/components/card.js" defer></script>
+    <script src="/components/card-grid.js" defer></script>
+
+    <t-header> </t-header>
+    <t-section>
+        <h1 slot="section-title">vår familj</h1>
+        <h2 slot="section-description">vi är en familj i Solna som består av två barn och två vuxna</h2>
+
+        <div slot="section-body">
+            <t-card-grid>
+                <t-card>
+                    <h2 slot="card-title">pappa</h2>
+                    <p slot="card-body">Robert</p>
+                    <li slot="card-bullet">verksamhetsarkitekt</li>
+                    <li slot="card-bullet">basketspelare</li>
+                    <li slot="card-bullet">homelabbare</li>
+                    <a slot="card-action" class="cta cta-primary" href="//robert.hurra.family">läs mer</a>
+                    <a slot="card-action" class="cta cta-secondary" href="mailto:robert@hurra.family">kontakta</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">mamma</h2>
+                    <p slot="card-body">Jovana</p>
+                    <li slot="card-bullet">teknisk testare</li>
+                    <li slot="card-bullet">organisatör</li>
+                    <li slot="card-bullet">bäst ❤️</li>
+                    <a slot="card-action" class="cta cta-primary" href="#">läs mer</a>
+                    <a slot="card-action" class="cta cta-secondary" href="mailto:jovana@hurra.family">kontakta</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">son</h2>
+                    <li slot="card-bullet">väldigt nyfiken</li>
+                    <li slot="card-bullet">gott om energi</li>
+                    <li slot="card-bullet">sitter aldrig stilla</li>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">dotter</h2>
+                    <li slot="card-bullet">älskar att äta</li>
+                    <li slot="card-bullet">tycker om att mysa</li>
+                    <li slot="card-bullet">vill alltid ha mamma</li>
+                </t-card>
+            </t-card-grid>
+        </div>
+    </t-section>
+    <t-footer> </t-footer>
+</body>
+
+</html>
