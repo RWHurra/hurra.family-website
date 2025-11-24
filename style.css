@@ -222,3 +222,17 @@ section {
 .margin7 {
     margin: var(--spacing7) auto;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font: 400 2rem/1.2em "Science Gothic", serif;
+    }
+
+    h2 {
+        font: 400 1.3rem/1.2em "Science Gothic", serif;
+    }
+
+    p {
+        font: 1rem/1.5em "Inter", serif;
+    }
+}
