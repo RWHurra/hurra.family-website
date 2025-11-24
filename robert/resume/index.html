@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Hurra | Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/section.js" defer></script>
+    <script src="/components/card.js" defer></script>
+    <script src="/components/card-grid.js" defer></script>
+
+    <t-header> </t-header>
+    <t-section>
+        <h1 slot="section-title">CV</h1>
+        <h2 slot="section-description">vad jag gör på mina arbetsdagar</h2>
+
+        <div slot="section-body">
+            <t-card-grid>
+
+                <t-card>
+                    <h2 slot="card-title">🎓 utbildning</h2>
+                    <p slot="card-body">ingenjör från KTH</p>
+                    <li slot="card-bullet">master: teknisk fysik inriktning optisk fysik</li>
+                    <li slot="card-bullet">bachelor: mikroelektronik</li>
+                    <a slot="card-action" class="cta cta-primary" href="#education">se detaljer</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">💼 arbete</h2>
+                    <p slot="card-body">verksamhetsarkitekt @ Vattenfall Eldistrubition</p>
+                    <li slot="card-bullet">sedan 2025-01</li>
+                    <li slot="card-bullet">målarkitektur</li>
+                    <li slot="card-bullet">informationsklassningar</li>
+                    <li slot="card-bullet">arkitekturgranskningar</li>
+                    <a slot="card-action" class="cta cta-primary" href="#employments">se
+                        historik</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">🎖️ certs & kurser</h2>
+                    <p slot="card-body">gått flera kurser och några certifieringar</p>
+                    <li slot="card-bullet">krav</li>
+                    <li slot="card-bullet">arkitektur</li>
+                    <li slot="card-bullet">projektledning</li>
+                    <li slot="card-bullet">terminologi</li>
+                    <li slot="card-bullet">arbetsmiljö</li>
+                    <a slot="card-action" class="cta cta-primary" href="#certs">se
+                        detaljer</a>
+                </t-card>
+
+            </t-card-grid>
+        </div>
+    </t-section>
+
+    <t-section id="education">
+        <h1 slot="section-title">🎓 utbildning</h1>
+        <div slot="section-body">
+
+            <t-card-grid>
+
+                <t-card>
+                    <h2 slot="card-title">master</h2>
+                    <p slot="card-body">teknisk fysik, inriktning optisk fysik</p>
+                    <li slot="card-bullet">examen 2014</li>
+                    <li slot="card-bullet">master thesis: Narrow Linewidth All-fiberCavity Thulium Fiber Laser at 2 µm
+                    </li>
+                    <a slot="card-action" class="cta cta-primary"
+                        href="https://kth.diva-portal.org/smash/get/diva2:767603/FULLTEXT01.pdf" target="_blank"> master
+                        thesis</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">bachelor</h2>
+                    <p slot="card-body">mikroelektronik</p>
+                    <li slot="card-bullet">bachelor thesis: Fabrication of Carbon Nanotube Doped Thin Films for Laser
+                        Applications</li>
+                    <a slot="card-action" class="cta cta-primary"
+                        href="Fabrication of Carbon Nanotube Doped Thin Films for Laser Applications."
+                        target="_blank">bachelor thesis</a>
+                </t-card>
+
+            </t-card-grid>
+        </div>
+    </t-section>
+
+    <t-section id="employments">
+        <h1 slot="section-title">💼 arbete</h1>
+
+        <div slot="section-body">
+            <t-card-grid>
+
+                <t-card>
+                    <h2 slot="card-title">verksamhetsarkitekt</h2>
+                    <h3 slot="card-title">Vattenfall Eldistribution</h3>
+                    <span slot="card-title">2025-01 → </span>
+                    <p slot="card-body">Jag blev rekryterad av en tidigare kollega från aRway. </p>
+                    <li slot="card-bullet">en del av arkitekturgruppen</li>
+                    <li slot="card-bullet">ingår i arkitekturdomänen <i>customer, market and metering</i></li>
+                    <a slot="card-action" class="cta cta-secondary" href="https://www.vattenfalleldistribution.se/"
+                        target="_blank">Vattenfall Eldistribution</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">systemingenjör</h2>
+                    <h3 slot="card-title">CAG Consoden</h3>
+                    <span slot="card-title">2021-08 → 2024-12</span>
+                    <p slot="card-body">Jag blev rekryterad av min tidigare VD från C3 Konsult.</p>
+                    <li slot="card-bullet">uppdrag hos <a href="https//fmv.se" target="_blank">FMV</a> och <a
+                            href="https//forsvarsmakten.se" target="_blank">Försvarsmakten</a></li>
+                    <li slot="card-bullet">systemarkitektur</li>
+                    <li slot="card-bullet">intressent- och systemkrav på olika nivåer</li>
+                    <a slot="card-action" class="cta cta-secondary"
+                        href="https://www.cag.se/om-oss/vara-bolag/cag-consoden/" target="_blank">CAG Consoden</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">systemingenjör</h2>
+                    <h3 slot="card-title">Rejlers Defence & Security</h3>
+                    <span slot="card-title">2021-01 → 2021-08</span>
+                    <p slot="card-body">C3 Konsult blev förvärvade av Rejlers.</p>
+                    <li slot="card-bullet">uppdrag hos <a href="https//fmv.se" target="_blank">FMV</a> och <a
+                            href="https//forsvarsmakten.se" target="_blank">Försvarsmakten</a></li>
+                    <li slot="card-bullet">systemarkitektur</li>
+                    <li slot="card-bullet">intressent- och systemkrav på olika nivåer</li>
+                    <a slot="card-action" class="cta cta-secondary"
+                        href="https://www.rejlers.com/se/sektorer-och-tjanster/industri/forsvar-och-sakerhet/"
+                        target="_blank">Rejlers Defence & Security</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">systemingenjör</h2>
+                    <h3 slot="card-title">C3 Konsult</h3>
+                    <span slot="card-title">2018-01 → 2021-01</span>
+                    <p slot="card-body">Jag valde aktivt att söka mig bort från aRway.</p>
+                    <li slot="card-bullet">uppdrag hos <a href="https//fmv.se" target="_blank">FMV</a>, <a
+                            href="https//forsvarsmakten.se" target="_blank">Försvarsmakten</a> och <a
+                            href="https//ivo.se" target="_blank">IVO</a></li>
+                    <li slot="card-bullet">systemarkitektur</li>
+                    <li slot="card-bullet">intressent- och systemkrav på olika nivåer</li>
+                    <li slot="card-bullet">informationsarkiutektur</li>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">verksamhetsarkitekt</h2>
+                    <h3 slot="card-title">aRway</h3>
+                    <span slot="card-title">2016-08 → 2017-12</span>
+                    <p slot="card-body">Här påbörjade jag min resa inom arkitektur.</p>
+                    <li slot="card-bullet">uppdrag hos <a href="https://www.afaforsakring.se/" target="_blank">afa
+                            försäkring</a>, <a href="https://skb.se/" target="_blank">SKB</a> och <a
+                            href="https://sundsvall.se/" target="_blank">Sundsvall Kommun</a></li>
+                    <li slot="card-bullet">systemarkitektur</li>
+                    <li slot="card-bullet">verksamhetsarkitektur</li>
+                    <li slot="card-bullet">informationsarkiutektur</li>
+                    <a slot="card-action" class="cta cta-secondary" href="https://www.arway.se/"
+                        target="_blank">aRway</a>
+                </t-card>
+
+            </t-card-grid>
+        </div>
+    </t-section>
+
+    <t-section id="certs">
+        <h1 slot="section-title">🎖️ certs & kurser</h1>
+
+        <div slot="section-body">
+            <t-card-grid>
+                <t-card>
+                    <h2 slot="card-title">kravingenjör</h2>
+                    <p slot="card-body">certifierad kravingenjör från <a href="https://ireb.org"
+                            target="_blank">IREB</a></p>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">SAFe Architect</h2>
+                    <p slot="card-body">certifierad arkitekt från <a href="https://scaledagile.com/"
+                            target="_blank">scaled
+                            agile</a></p>
+
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">Systematisk arbetsmiljöarbete (SAM)</h2>
+                    <p slot="card-body">kurs från <a href="https://www.prevent.se/" target="_blank">prevent</a> för att
+                        agera skyddsombud vid <a href="https://www.cag.se/om-oss/vara-bolag/cag-consoden/"
+                            target="_blank">CAG Consoden</a></p>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">Utveckling och anskaffning av militära system (ISO15288)</h2>
+                    <p slot="card-body">kurs från <a href="https://www.fhs.se/" target="_blank">FHS</a></p>
+                    <a slot="card-action" class="cta cta-secondary"
+                        href="https://www.fhs.se/utbildningar/utveckling-och-anskaffning-av-militara-system---grundkurs.html"
+                        target="_blank">kursbeskrivning</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">Projektledning</h2>
+                    <p slot="card-body">grundkurs och fördjupningskurs från <a href="https://www.foretagsakademin.se/"
+                            target="_blank">Företagsakademin</a></p>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">Terminologi</h2>
+                    <p slot="card-body">kurs från <a href="https://www.cag.se/om-oss/vara-bolag/cag-consoden/"
+                            target="_blank">CAG Consoden</a></p>
+                    <a slot="card-action" class="cta cta-secondary"
+                        href="https://www.cag.se/courses/begripliga-begrepp-och-tydliga-termer/"
+                        target="_blank">kursbeskrivning</a>
+                </t-card>
+            </t-card-grid>
+        </div>
+    </t-section>
+    <t-footer> </t-footer>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Hurra | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/section.js" defer></script>
+    <script src="/components/card.js" defer></script>
+    <script src="/components/card-grid.js" defer></script>
+
+    <t-header> </t-header>
+    <t-section>
+        <h1 slot="section-title">Robert Hurra</h1>
+        <h2 slot="section-description">verksamhetsarkitekt med många hobbies</h2>
+
+        <div slot="section-body">
+            <t-card-grid>
+                <t-card>
+                    <h2 slot="card-title">fritid</h2>
+                    <p slot="card-body">jag gör mycket olika saker</p>
+                    <li slot="card-bullet">basket</li>
+                    <li slot="card-bullet">schack</li>
+                    <li slot="card-bullet">homelab</li>
+                    <a slot="card-action" class="cta cta-primary" href="/leisure">läs mer</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">erfarenhet</h2>
+                    <p slot="card-body">jag är verksamhetsarkitekt med diverse certifieringar</p>
+                    <li slot="card-bullet">verksamhetsarkitekt</li>
+                    <li slot="card-bullet">certifierad kravingenjör</li>
+                    <li slot="card-bullet">certifierad SAFe Architect</li>
+                    <a slot="card-action" class="cta cta-primary" href="/resume">läs mer</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">homelab</h2>
+                    <p slot="card-body">sedan 2025-11 har jag ett homelab</p>
+                    <li slot="card-bullet">virtualization</li>
+                    <li slot="card-bullet">containers</li>
+                    <li slot="card-bullet">automation</li>
+                    <a slot="card-action" class="cta cta-primary" href="/homelab">läs mer</a>
+
+                </t-card>
+
+            </t-card-grid>
+        </div>
+    </t-section>
+    <t-footer> </t-footer>
+</body>
+
+</html>

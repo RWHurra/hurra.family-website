@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hurra.family kontakta oss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/section.js" defer></script>
+    <script src="/components/card.js" defer></script>
+    <script src="/components/card-grid.js" defer></script>
+
+    <t-header> </t-header>
+    <t-section>
+        <h1 slot="section-title">kontakta oss</h1>
+        <h2 slot="section-description">du når oss enklast via följande adresser</h2>
+
+        <div slot="section-body">
+            <t-card-grid>
+                <t-card>
+                    <h2 slot="card-title">pappa</h2>
+                    <a slot="card-action" class="cta cta-primary" href="mailto:robert@hurra.family">robert at hurra dot
+                        family</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">mamma</h2>
+                    <a slot="card-action" class="cta cta-primary" href="mailto:jovana@hurra.family">jovana at hurra dot
+                        family</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">generellt</h2>
+                    <a slot="card-action" class="cta cta-primary" href="mailto:email@hurra.family">email at hurra dot
+                        family</a>
+                </t-card>
+            </t-card-grid>
+        </div>
+    </t-section>
+    <t-footer> </t-footer>
+</body>
+
+</html>
