@@ -4,37 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Hurra | Utveckling & Labbar</title>
+    <title>Robert Hurra | välkommen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
     <script src="/components/header.js" defer></script>
     <script src="/components/footer.js" defer></script>
-    <script src="/components/section.js" defer></script>
-    <script src="/components/card.js" defer></script>
+    <script src="/components/hero.js" defer></script>
     <t-header> </t-header>
-    <t-section heading="homelab" details="i slutet av 2025 påbörjade jag min self-host och homelab-resa"
-        cards='
-        [{"heading":"virtualisering", "details":"jag försöker främst använda lite hårdvara med mycket visualisering", "bullets":"proxmox ve,proxmox bs,docker compose"},
-        {"heading":"containers", "details":"jag har ett flertal containers via docker compose", "bullets":"adguard home, portainer"},
-        {"heading":"nätverk/proxy", "details":"nätverk är nog den delen jag har minst koll på just nu, men använder", "bullets":"nginx proxy manager, wireguard"},
-        {"heading":"automation", "details":"jag har länge haft ett smart hem, men nu gått över till ett dedikerat OS", "bullets":"home assistant"}]'>
-    </t-section>
-    <t-section heading="fritid" details="jag har oftast inget problem att fylla min tid"
-        cards='
-        [{"heading":"basket", "details":"spelat basket sedan 1998"},
-        {"heading":"schack", "details":"spelar regelbundet på lichess.com och även over the board"},
-        {"heading":"gaming", "details":"alltid varit en gamer, kommer antagligen alltid att vara det", "bullets":"counter-strike, starcraft"}]'>
-    </t-section>
-    <t-section heading="erfarenhet" details="jag är verksamhetsarkitekt och certifierad kravingenjör" cards='
-    [{"heading":"anställningar", "details":"mina anställningar genom åren", "bullets":"verksamhetsarkitekt Vattenfall Eldistribution (2025-), systemingenjör CAG Consoden (2021-2024), systemingenjör Rejlers Defense & Security (2021), systemingenjör C3 Konsult (2018-2021), verksamhetsarkitekt aRway (2016-2017)"},
-    {"heading":"utbildningar", "details":"ingenjör från KTH", "bullets":"master engineering physics - track optical physics, bachelor microelectronics"},
-    {"heading":"kurser och certifieringar", "details":"arbetsrelaterade kurser och certifieringar", "bullets":"certifierad kravingenjör - IREB, certifierad SAFe Architect - Scaled Agile Inc, Systematiskt arbetsmiljöarbete (SAM) - Prevent, Anskaffning av militära system (ISO15288) - Försvarshögskolan (2 HP), Grundkurs Projektledning - Företagsakademin, Projektledning fördjupning - Företagsakademin, Terminologi - CAG"}]'>
-    </t-section>
+    <t-hero>
+        <h1 slot="hero-title">jag heter Robert</h1>
+        <h2 slot="hero-heading">jag är en mångsysslare</h2>
+
+        <p slot="hero-body">jag har ett homelab och self-hostar</p>
+        <p slot="hero-body">jag gejmar, spelar basket och schack</p>
+        <p slot="hero-body">jag är verksamhetsarkitekt med diverse certifieringar</p>
+
+        <a slot="hero-action" href="/about" class="cta cta-primary">vem är jag?</a>
+        <a slot="hero-action" href="/what" class="cta cta-secondary">vad gör jag?</a>
+    </t-hero>
     <t-footer> </t-footer>
 </body>
 
