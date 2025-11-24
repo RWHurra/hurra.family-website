@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Hurra | Leisure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/section.js" defer></script>
+    <script src="/components/card.js" defer></script>
+    <script src="/components/card-grid.js" defer></script>
+
+    <t-header> </t-header>
+    <t-section>
+        <h1 slot="section-title">Fritid</h1>
+        <h2 slot="section-description">vad jag gör på min fritid</h2>
+
+        <div slot="section-body">
+            <t-card-grid>
+                <t-card>
+                    <h2 slot="card-title">🏀 basket</h2>
+                    <p slot="card-body">jag spelar basket och har även coachat</p>
+                    <li slot="card-bullet">började spela basket 1988</li>
+                    <li slot="card-bullet">coachat och utbildad via Svenska Basketbollförbundet</li>
+                    <li slot="card-bullet">spelar just nu med AIK Vets</li>
+                    <a slot="card-action" class="cta cta-primary"
+                        href="https://www.profixio.com/app/lx/competition/leagueid17541/teams/1410762"
+                        target="_blank">nuvarande säsong</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">♟️ schack</h2>
+                    <p slot="card-body">spelat schack många år, men inget seriöst</p>
+                    <li slot="card-bullet">spelar främst bullet</li>
+                    <li slot="card-bullet">spelar over-the-board med vänner</li>
+                    <a slot="card-action" class="cta cta-primary" href="https://lichess.org/@/RobbasGaming"
+                        target="_blank">lichess profil</a>
+                </t-card>
+
+                <t-card>
+                    <h2 slot="card-title">🖥 homelab</h2>
+                    <p slot="card-body">sedan 2025-11 har jag ett homelab</p>
+                    <li slot="card-bullet">virtualization</li>
+                    <li slot="card-bullet">containers</li>
+                    <li slot="card-bullet">automation</li>
+                    <a slot="card-action" class="cta cta-primary" href="/homelab">läs mer</a>
+
+                </t-card>
+
+            </t-card-grid>
+        </div>
+    </t-section>
+    <t-footer> </t-footer>
+</body>
+
+</html>
