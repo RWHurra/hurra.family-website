@@ -7,15 +7,19 @@
 
 /* Variables */
 :root {
-    /* FÄRGER - NY SEMANTISK STRUKTUR */
+    --theme-transition: all 0.3s ease-in-out;
+
     --bg-dark: hsl(190 100% 1%);
     --bg: hsl(186 100% 3%);
     --bg-light: hsl(184 100% 6%);
+
     --text: hsl(184 100% 88%);
     --text-muted: hsl(184 39% 62%);
+
     --highlight: hsl(184 49% 31%);
     --border: hsl(183 100% 16%);
     --border-muted: hsl(184 100% 7%);
+
     --primary: hsl(184 54% 57%);
     --secondary: hsl(2 67% 75%);
     --danger: hsl(9 37% 65%);
@@ -23,13 +27,15 @@
     --success: hsl(147 24% 57%);
     --info: hsl(217 40% 66%);
 
-    /* BEHÅLLDA TYPOGRAFI & SPACING */
     --ff: "Inter", serif;
     --ff2: "Science Gothic", serif;
+
     --p: 1rem/1.5em var(--ff);
     --p-bold: 600 1rem/1.5em var(--ff);
+
     --h1: 600 3rem/1.2em var(--ff2);
     --h2: 600 2rem/1.2em var(--ff2);
+
     --spacing1: 4px;
     --spacing2: 8px;
     --spacing3: 16px;
@@ -37,7 +43,28 @@
     --spacing5: 40px;
     --spacing6: 80px;
     --spacing7: 160px;
+
     --media-width: 768px;
+}
+
+:root.light {
+    --bg-dark: hsl(184 100% 98%);
+    --bg: hsl(184 100% 96%);
+    --bg-light: hsl(184 100% 93%);
+
+    --text: hsl(184 100% 12%);
+    --text-muted: hsl(184 39% 38%);
+
+    --highlight: hsl(184 49% 69%);
+    --border: hsl(184 100% 75%);
+    --border-muted: hsl(184 100% 88%);
+
+    --primary: hsl(184 54% 43%);
+    --secondary: hsl(2 67% 45%);
+    --danger: hsl(9 37% 35%);
+    --warning: hsl(52 26% 34%);
+    --success: hsl(147 24% 37%);
+    --info: hsl(217 40% 36%);
 }
 
 /* Global Styles */
@@ -49,9 +76,8 @@ body {
     text-wrap: balance;
     font: var(--p);
     background: var(--bg);
-    /* Ersatt var(--color10) */
     color: var(--text);
-    /* Ersatt var(--color90) */
+    transition: var(--theme-transition);
 }
 
 h1 {
@@ -69,14 +95,12 @@ p {
 
 a {
     color: var(--text);
-    /* Ersatt var(--color90) */
     text-decoration: underline;
     text-underline-offset: 4px;
 }
 
 a:hover {
     color: var(--primary);
-    /* Ersatt var(--color100) - Använder nu Primary accent */
 }
 
 /* buttons */
