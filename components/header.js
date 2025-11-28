@@ -18,32 +18,35 @@ class THeader extends HTMLElement {
         this.innerHTML = `
         <link rel="stylesheet" href="/components/header.css">
         <header>
-            <div class="nav-left">
-                <div class="site-icon-container">
-                    <a href="//${THeader.activeSubdomain}.hurra.family">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="site-icon">
-                            <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                            <path d="${THeader.PATH_HOUSE}"/>
-                        </svg>
-                    </a>
+            <div class="header">
+                <div class="nav-left">
+                    <div class="site-icon-container">
+                        <a href="//${THeader.activeSubdomain}.hurra.family">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="site-icon">
+                                <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path d="${THeader.PATH_HOUSE}" />
+                            </svg>
+                        </a>
+                    </div>
+                    <span class="subdomain-links">
+                        <a href="//hurra.family">hurra.family</a>
+                        /
+                        <a href="//robert.hurra.family">robert</a>
+                        /
+                        <a href="#">jovana</a>
+                    </span>
                 </div>
-                <span class="subdomain-links">
-                    <a href="//hurra.family">hurra.family</a>
-                    /
-                    <a href="//robert.hurra.family">robert</a>
-                    /
-                    <a href="#">jovana</a>
-                </span>
+
+                <nav class="site-nav">
+                    ${dynamicLinksHtml}
+                    <theme-toggle-button></theme-toggle-button>
+                </nav>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" id="ham-icon" class="ham">
+                    <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path class="path" d="${THeader.PATH_OPEN}" />
+                </svg>
             </div>
-
-            <nav class="site-nav">
-                ${dynamicLinksHtml}
-            </nav>
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="ham">
-                <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                <path class="path" d="${THeader.PATH_OPEN}"/>
-            </svg>
         </header>
         `;
         this.setupHamburger();
@@ -51,7 +54,7 @@ class THeader extends HTMLElement {
 
     setupHamburger() {
         const ham = this.querySelector(".ham");
-        const path = this.querySelector("path");
+        const path = this.querySelector("#ham-icon path");
         const nav = this.querySelector(".site-nav");
         ham.addEventListener("click", toggle);
         nav.addEventListener("click", toggle);
@@ -74,8 +77,6 @@ class THeader extends HTMLElement {
 
         const devTlds = ['local', 'dev', 'test', 'lan'];
         const isDev = devTlds.includes(tld);
-
-        console.log("Hostname parts:", parts);
 
         // handle dev environments
         if (isDev) {
