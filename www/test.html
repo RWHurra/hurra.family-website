@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hurra.family TEST</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/hero.js" defer></script>
+    <script src="/components/theme-toggle.js" defer></script>
+
+    <t-header> </t-header>
+
+    <t-hero>
+        <h1 slot="hero-title">detta är en test-sida</h1>
+        <h2 slot="hero-heading">just nu testar jag dark/light toggle</h2>
+
+        <p slot="hero-body">jag försöker implementera funktionalitet för att toggla mellan ljust och mörkt läge</p>
+
+        <a slot="hero-action" href="#" class="cta cta-primary">toggle</a>
+        <a slot="hero-action" href="#" class="cta cta-secondary">-</a>
+    </t-hero>
+
+    <t-footer> </t-footer>
+
+    <link rel="stylesheet" href="/components/footer.css">
+
+
+
+
+
+</body>
+
+</html>

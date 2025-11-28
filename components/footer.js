@@ -7,28 +7,28 @@ class TFooter extends HTMLElement {
     <link rel="stylesheet" href="/components/footer.css">
     <footer>
         <div class="footer">
-        <div class="footer-left">
-          <p>
-            &copy; hurra family 2025
-          </p>
+            <div class="footer-left">
+                <p>
+                    &copy; hurra family 2025
+                </p>
+            </div>
+            <div class="footer-right">
+                <div class="social-media-icons">
+                    <a href="mailto:email@hurra.family">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="social-media">
+                            <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path d="${TFooter.PATH_EMAIL}" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/RWHurra/hurra.family-website">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="social-media">
+                            <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path d="${TFooter.PATH_GITHUB}" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="footer-right">
-            <div class="social-media-icons">
-              <a href="mailto:email@hurra.family">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="social-media">
-                    <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                      <path d="${TFooter.PATH_EMAIL}"/>
-                  </svg>
-              </a>
-              <a href="https://github.com/RWHurra/hurra.family-website">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="social-media">
-                    <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                      <path d="${TFooter.PATH_GITHUB}"/>
-                  </svg>
-              </a>
-          </div>
-        </div>
-      </div>
     </footer>
   `;
   }

@@ -1,4 +1,12 @@
 header {
+    background: var(--bg-light);
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    transition: var(--theme-transition);
+}
+
+.header {
     width: 90%;
     max-width: 1080px;
     margin: 0 auto;
@@ -7,7 +15,6 @@ header {
     justify-content: space-between;
     position: relative;
     padding: var(--spacing4) 0;
-    background-color: var(--bg);
 }
 
 .nav-left {

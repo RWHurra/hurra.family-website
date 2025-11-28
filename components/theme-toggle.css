@@ -1,0 +1,22 @@
+.theme-toggle {
+    background: var(--bg-light, #222);
+    color: var(--text, white);
+    border: 1px solid var(--border-muted, #555);
+    padding: var(--spacing2, 8px) var(--spacing3, 16px);
+    border-radius: var(--spacing3, 16px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--theme-transition, all 0.3s);
+}
+
+.theme-toggle:hover {
+    background: var(--highlight, #333);
+}
+
+.theme-toggle .icon {
+    width: 1.5em;
+    height: 1.5em;
+    transition: all 0.5s ease-in-out; 
+}
