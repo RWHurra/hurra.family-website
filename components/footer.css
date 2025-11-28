@@ -1,6 +1,7 @@
 footer {
     background: var(--bg-light);
     padding: var(--spacing5) 0 var(--spacing6) 0;
+    transition: var(--theme-transition);
 }
 
 .footer {
