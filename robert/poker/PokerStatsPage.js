@@ -104,20 +104,22 @@ class PokerStatsPage extends HTMLElement {
 
                     <h1>Poker Maratonlista</h1>
                     
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Spelare</th>
-                                <th>Spelade kvällar</th>
-                                <th>Netto Vinst/Förlust</th>
-                                <th>Vinster</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${leaderboardHtml}
-                        </tbody>
-                    </table>
+                    <div class="leaderboard-table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Spelare</th>
+                                    <th>Spelade kvällar</th>
+                                    <th>Netto Vinst/Förlust</th>
+                                    <th>Vinster</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${leaderboardHtml}
+                            </tbody>
+                        </table>
+                    </div>
 
 
                 </div>
