@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "date": "2025-03-22",
+        "location": "Robert",
+        "buyIn": 100,
+        "totalPot": 600,
+        "players": [
+            {
+                "name": "Hurra",
+                "placement": 2,
+                "winnings": 100
+            },
+            {
+                "name": "Robert",
+                "placement": 3,
+                "winnings": 0
+            },
+            {
+                "name": "Joel",
+                "placement": 1,
+                "winnings": 500
+            },
+            {
+                "name": "Sammy",
+                "extraBuyIns": 1,
+                "placement": 5,
+                "winnings": 0
+            },
+            {
+                "name": "Marcus",
+                "placement": 4,
+                "winnings": 0
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "date": "2025-05-16",
+        "location": "Robert",
+        "buyIn": 100,
+        "totalPot": 500,
+        "players": [
+            {
+                "name": "Hurra",
+                "placement": 1,
+                "winnings": 400
+            },
+            {
+                "name": "Robert",
+                "placement": 2,
+                "winnings": 100
+            },
+            {
+                "name": "Alexander",
+                "placement": 5,
+                "winnings": 0
+            },
+            {
+                "name": "Marcus",
+                "placement": 3,
+                "winnings": 0
+            },
+            {
+                "name": "Andrea",
+                "placement": 4,
+                "winnings": 0
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "date": "2025-07-25",
+        "location": "Robert",
+        "buyIn": 100,
+        "totalPot": 400,
+        "players": [
+            {
+                "name": "Hurra",
+                "placement": 4,
+                "winnings": 0
+            },
+            {
+                "name": "Robert",
+                "placement": 1,
+                "winnings": 300
+            },
+            {
+                "name": "Sammy",
+                "placement": 2,
+                "winnings": 100
+            },
+            {
+                "name": "Marcus",
+                "placement": 3,
+                "winnings": 0
+            }
+        ]
+    }
+]

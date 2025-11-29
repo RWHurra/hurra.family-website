@@ -1,0 +1,55 @@
+:host {
+    display: block;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: var(--card-width, 300px);
+    height: var(--card-height, 200px);
+    border: 1px solid var(--border-muted, #f1f1f1);
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: var(--bg-light);
+    color: var(--text);
+}
+
+.flip-card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+::slotted(*) {
+    max-width: 100%;
+}

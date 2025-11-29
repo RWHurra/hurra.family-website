@@ -1,0 +1,29 @@
+.poker-container {
+    width: 90%;
+    max-width: 1080px;
+    text-align: center;
+    padding: var(--spacing5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing5);
+}
+
+th,
+td {
+    text-align: left;
+    padding: var(--spacing3);
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background: var(--bg-light);
+}
+
+h1 {
+    /* font-size: 2rem; */
+    /* justify-content: center; */
+    margin-bottom: var(--spacing5);
+}
