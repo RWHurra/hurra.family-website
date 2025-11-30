@@ -164,6 +164,8 @@ section {
     width: 90%;
     max-width: 1080px;
     margin: 0 auto;
+    padding-top: var(--spacing6);
+    padding-bottom: var(--spacing6);
 }
 
 .center {

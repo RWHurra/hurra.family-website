@@ -30,7 +30,6 @@ class PokerStatsPage extends HTMLElement {
             const rawData = await response.json();
 
             // 2. Beräkna aggregerad statistik
-            // Vi använder den importerade funktionen här
             const calculatedStats = calculatePokerStats(rawData);
 
             // 3. Skapa topplistan (Sortera efter Netto Vinst, högst först)
@@ -75,7 +74,7 @@ class PokerStatsPage extends HTMLElement {
         const eventsListCardsHtml = rawData.map(event => `
             <flip-card card-width="350px" card-height="250px">
                 <div slot="front-content">
-                    <h1 style="color: var(--primary); font-size: 3rem; margin-bottom: 2rem;">🏆 ${event.players.find(p => p.placement === 1)?.name || 'N/A'}</h1>
+                    <h1 style="color: var(--primary); font-size: 3rem; margin-bottom: 2rem;">🏆 ${event.firstPlaceWinner || 'N/A'}</h1>
                     <p style="font: var(--h2); margin-top: 0;">${event.date}</p>
                     <h3 style="color: var(--text-muted);">@ ${event.location}</h3>
                     
@@ -84,9 +83,9 @@ class PokerStatsPage extends HTMLElement {
 
                 <div slot="back-content">
                     <h2 style="font-size: 1.5rem; margin-bottom: 2rem;">Placeringar:</h2>
-                    <p>🥇 ${event.players.find(p => p.placement === 1)?.name || 'N/A'} ${formatNetWinnings(event.players.find(p => p.placement === 1).winnings || 'N/A')}</p>
-                    <p>🥈 ${event.players.find(p => p.placement === 2)?.name || 'N/A'} ${formatNetWinnings(event.players.find(p => p.placement === 2).winnings || 'N/A')}</p>
-                    <p>🥉 ${event.players.find(p => p.placement === 3)?.name || 'N/A'} ${formatNetWinnings(event.players.find(p => p.placement === 3).winnings || 'N/A')}</p>
+                    <p>🥇 ${event.firstPlaceWinner || 'N/A'} ${formatNetWinnings(event.players.find(p => p.name === event.firstPlaceWinner).winnings || 'N/A')}</p>
+                    <p>🥈 ${event.secondPlaceWinner || 'N/A'} ${formatNetWinnings(event.players.find(p => p.name === event.secondPlaceWinner).winnings || 'N/A')}</p>
+                    <p>🥉 ${event.thirdPlaceWinner || 'N/A'} ${formatNetWinnings(event.players.find(p => p.name === event.thirdPlaceWinner).winnings || 'N/A')}</p>
                     </div>
             </flip-card>
 `).join('');
