@@ -4,33 +4,27 @@
         "date": "2025-03-22",
         "location": "Robert",
         "buyIn": 100,
-        "totalPot": 600,
         "players": [
             {
                 "name": "Hurra",
-                "placement": 2,
-                "winnings": 100
+                "placement": 2
             },
             {
                 "name": "Robert",
-                "placement": 3,
-                "winnings": 0
+                "placement": 3
             },
             {
                 "name": "Joel",
-                "placement": 1,
-                "winnings": 500
+                "placement": 1
             },
             {
                 "name": "Sammy",
-                "extraBuyIns": 1,
                 "placement": 5,
-                "winnings": 0
+                "extraBuyIns": 1
             },
             {
                 "name": "Marcus",
-                "placement": 4,
-                "winnings": 0
+                "placement": 4
             }
         ]
     },
@@ -39,32 +33,26 @@
         "date": "2025-05-16",
         "location": "Robert",
         "buyIn": 100,
-        "totalPot": 500,
         "players": [
             {
                 "name": "Hurra",
-                "placement": 1,
-                "winnings": 400
+                "placement": 1
             },
             {
                 "name": "Robert",
-                "placement": 2,
-                "winnings": 100
+                "placement": 2
             },
             {
                 "name": "Alexander",
-                "placement": 5,
-                "winnings": 0
+                "placement": 5
             },
             {
                 "name": "Marcus",
-                "placement": 3,
-                "winnings": 0
+                "placement": 3
             },
             {
                 "name": "Andrea",
-                "placement": 4,
-                "winnings": 0
+                "placement": 4
             }
         ]
     },
@@ -73,27 +61,22 @@
         "date": "2025-07-25",
         "location": "Robert",
         "buyIn": 100,
-        "totalPot": 400,
         "players": [
             {
                 "name": "Hurra",
-                "placement": 4,
-                "winnings": 0
+                "placement": 4
             },
             {
                 "name": "Robert",
-                "placement": 1,
-                "winnings": 300
+                "placement": 1
             },
             {
                 "name": "Sammy",
-                "placement": 2,
-                "winnings": 100
+                "placement": 2
             },
             {
                 "name": "Marcus",
-                "placement": 3,
-                "winnings": 0
+                "placement": 3
             }
         ]
     }

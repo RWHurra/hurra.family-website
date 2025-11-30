@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Hurra | poker data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../poker.css" />
+    <script src="/components/theme-toggle.js" defer></script>
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/json-tree.js" defer></script>
+</head>
+
+<body>
+    <t-header> </t-header>
+    <section>
+        <h1>Poker Stats Data (JSON)</h1>
+        <p>Rådata för pokerstatistik som används på <a href="../">poker-sidan</a>.</p>
+
+        <div class="json-schema-container">
+            <h2>JSON-struktur: Array av Event-objekt</h2>
+
+            <dl>
+                <dt>Array ([])</dt>
+                <dd>
+                    — Representerar <b>alla spelade event</b>. Varje element i arrayen är ett Event-objekt.
+                    <dl>
+                        <dt>Event-objekt ({})</dt>
+                        <dd>
+                            — Representerar en enskild pokerkväll.
+                            <ul>
+                                <li><span class="key">id</span>: <code>Number</code> - Unikt ID för eventet.</li>
+                                <li><span class="key">date</span>: <code>String</code> - Datum i formatet YYYY-MM-DD.
+                                </li>
+                                <li><span class="key">location</span>: <code>String</code> - Plats där eventet spelades.
+                                </li>
+                                <li><span class="key">buyIn</span>: <code>Number</code> - Standard insats per spelare.
+                                </li>
+                                <li><span class="key">players</span>: <code>Array</code> - En lista över alla deltagare
+                                    i eventet.</li>
+                            </ul>
+
+                            <dl class="nested-list">
+                                <dt>Player-objekt ({})</dt>
+                                <dd>
+                                    — Representerar en enskild spelares resultat för kvällen.
+                                    <ul>
+                                        <li><span class="key">name</span>: <code>String</code> - Spelarens namn.</li>
+                                        <li><span class="key">placement</span>: <code>Number</code> - Spelarens
+                                            placering (1 är bäst).</li>
+                                        <li><span class="key">winnings</span>: <code>Number</code> - <i>Valfritt</i>.
+                                            Uttaget belopp i kontanter/pris om standard <b>inte</b> följs: Vinnaren:
+                                            totalPot - buyIn, tvåan: buyIn</li>
+                                        <li><span class="key">extraBuyIns</span>: <code>Number</code> - <i>Valfritt</i>.
+                                            Antal re-buys/extra insatser utöver den initiala `buyIn`.</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </dd>
+            </dl>
+        </div>
+
+        <json-tree data="poker_stats.json"> </json-tree>
+        
+    </section>
+    <t-footer> </t-footer>
+</body>
+
+</html>
