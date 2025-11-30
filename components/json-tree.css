@@ -1,0 +1,71 @@
+:host {
+    display: block;
+    font-family: var(--ff, monospace);
+    color: var(--text);
+    padding: var(--spacing4);
+    border: 1px solid var(--border);
+    background: var(--bg-light);
+    border-radius: var(--spacing2);
+}
+
+details {
+    margin-left: var(--spacing4);
+    border-left: 1px dashed var(--highlight);
+    padding-left: var(--spacing2);
+}
+
+#tree-container {
+    padding-bottom: var(--spacing4);
+}
+
+summary {
+    cursor: pointer;
+    padding: var(--spacing1) 0;
+    font-weight: bold;
+    color: var(--primary);
+    outline: none;
+}
+
+summary:hover {
+    color: var(--text);
+}
+
+.json-value {
+    margin: var(--spacing1) 0;
+    padding-left: var(--spacing1);
+}
+
+.json-primitive {
+    color: var(--secondary);
+    font-weight: normal;
+}
+
+.array-summary {
+    color: var(--info);
+}
+
+.object-summary {
+    color: var(--primary);
+}
+
+#controls {
+    margin-bottom: var(--spacing3);
+    display: flex;
+    gap: var(--spacing2);
+    padding-top: var(--spacing3);
+    padding-left: var(--spacing3);
+}
+
+.tree-button {
+    padding: var(--spacing2) var(--spacing3);
+    background: var(--highlight);
+    color: var(--text);
+    border: none;
+    border-radius: var(--spacing2);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tree-button:hover {
+    background: var(--primary);
+}

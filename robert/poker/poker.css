@@ -1,13 +1,13 @@
 flip-card {
-    display: block; 
+    display: block;
 }
 
 @media (max-width: 768px) {
     .poker-flip-card {
-        width: 350px; 
+        width: 350px;
         max-width: 90%;
-        
-        margin: 0 auto var(--spacing4) auto; 
+
+        margin: 0 auto var(--spacing4) auto;
     }
 }
 
@@ -40,12 +40,61 @@ h1 {
 
 .leaderboard-table-container {
     width: 100%;
-    overflow-x: auto; 
-    
+    overflow-x: auto;
+
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
 .leaderboard-table-container::-webkit-scrollbar {
     display: none;
+}
+
+.json-schema-container {
+    padding: var(--spacing4);
+    margin-bottom: var(--spacing5);
+    background: var(--bg-light);
+    /* Ljusare bakgrund för att separera från trädet */
+    border: 1px solid var(--border);
+    border-radius: var(--spacing2);
+}
+
+.json-schema-container h2 {
+    color: var(--primary);
+    margin-bottom: var(--spacing4);
+}
+
+.json-schema-container dl,
+.json-schema-container ul {
+    margin: var(--spacing3) 0;
+    padding-left: var(--spacing4);
+    list-style-type: none;
+    /* Ta bort standard-list-bullets */
+}
+
+.json-schema-container dt {
+    font-weight: bold;
+    color: var(--highlight);
+    margin-top: var(--spacing2);
+    border-bottom: 1px dashed var(--border-muted);
+    padding-bottom: var(--spacing1);
+}
+
+.json-schema-container dd {
+    margin-left: var(--spacing3);
+    padding-top: var(--spacing1);
+    color: var(--text-muted);
+}
+
+.json-schema-container .key {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.json-schema-container code {
+    background: var(--bg-dark);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--secondary);
 }
