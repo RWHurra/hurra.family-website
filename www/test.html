@@ -12,19 +12,24 @@
     <link rel="stylesheet" href="/style.css" />
 </head>
 
-<body>
+<body data-current-lang="sv">
     <script src="/components/header.js" defer></script>
     <script src="/components/footer.js" defer></script>
     <script src="/components/hero.js" defer></script>
     <script src="/components/theme-toggle.js" defer></script>
+    <script src="/components/language-toggle.js" defer></script>
 
     <t-header> </t-header>
+
+    <language-toggle default-lang="sv" available-langs="en,sv,sr"></language-toggle>
 
     <t-hero>
         <h1 slot="hero-title">detta är en test-sida</h1>
         <h2 slot="hero-heading">just nu testar jag dark/light toggle</h2>
 
-        <p slot="hero-body">jag försöker implementera funktionalitet för att toggla mellan ljust och mörkt läge</p>
+        <p slot="hero-body" lang="sv" class="i18n">jag försöker implementera funktionalitet för att toggla mellan ljust och mörkt läge</p>
+        <p slot="hero-body" lang="en"class="i18n">I am trying to implement functionality to toggle between light and dark mode</p>
+        <p slot="hero-body" lang="sr" class="i18n">Pokušavam da implementiram funkcionalnost za prebacivanje između svetlog i tamnog režima</p>
 
         <a slot="hero-action" href="#" class="cta cta-primary">toggle</a>
         <a slot="hero-action" href="#" class="cta cta-secondary">-</a>

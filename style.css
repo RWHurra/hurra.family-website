@@ -249,6 +249,24 @@ section {
     margin: var(--spacing7) auto;
 }
 
+body[data-current-lang="en"] .i18n:not([lang="en"]) {
+    display: none;
+}
+
+body[data-current-lang="sv"] .i18n:not([lang="sv"]) {
+    display: none;
+}
+
+body[data-current-lang="sr"] .i18n:not([lang="sr"]) {
+    display: none;
+}
+
+/* Och kom ihåg att dölja elementen initialt innan JS hinner ladda */
+/* Välj standard-språket här. T.ex. dölj engelska om sv är default: */
+body:not([data-current-lang]) .i18n:not([lang="sv"]) {
+    display: none;
+}
+
 @media (max-width: 768px) {
     h1 {
         font: 400 2rem/1.2em "Science Gothic", serif;
