@@ -40,7 +40,7 @@ class THeader extends HTMLElement {
                 <nav class="site-nav">
                     ${dynamicLinksHtml}
                     <theme-toggle-button></theme-toggle-button>
-                    <language-toggle default-lang="sv" available-langs="en,sv,sr"></language-toggle>
+                    <language-toggle default-lang="sv"></language-toggle>
                 </nav>
 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" id="ham-icon" class="ham">

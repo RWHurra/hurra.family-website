@@ -10,14 +10,26 @@ class LanguageToggle extends HTMLElement {
         this.attachShadow({ mode: 'open' });
 
         this.defaultLang = this.getAttribute('default-lang') || 'sv';
-        
-        // FIX 1: Rensa mellanslag från tillgängliga språk.
-        this.availableLangs = (this.getAttribute('available-langs') || 'sv').split(',').map(lang => lang.trim());
-        
-        // Säkerställ att currentLang är ett giltigt språk i listan
-        this.currentLang = this.availableLangs.includes(localStorage.getItem('userLang')) 
-                            ? localStorage.getItem('userLang') 
-                            : this.defaultLang;
+
+        const langElements = document.querySelectorAll('[lang]');
+
+        const detectedLangs = new Set();
+        langElements.forEach(el => {
+            const langCode = el.getAttribute('lang').trim();
+            if (langCode) {
+                detectedLangs.add(langCode);
+            }
+        });
+
+        this.availableLangs = Array.from(detectedLangs).sort();
+
+        if (this.availableLangs.length === 0) {
+            this.availableLangs = [this.defaultLang];
+        }
+
+        this.currentLang = this.availableLangs.includes(localStorage.getItem('userLang'))
+            ? localStorage.getItem('userLang')
+            : this.defaultLang;
 
         this.render();
         this.updatePageLanguage(this.currentLang);
@@ -67,7 +79,7 @@ class LanguageToggle extends HTMLElement {
         document.addEventListener('click', (e) => {
             // Kontrollerar om klicket ÄR INUTI komponenten eller dess Shadow DOM
             const isInside = this.contains(e.target) || e.composedPath().includes(this);
-            
+
             if (!isInside) {
                 this.shadowRoot.querySelector('.dropdown').classList.remove('open');
             }
@@ -81,7 +93,7 @@ class LanguageToggle extends HTMLElement {
     selectLanguage(newLang) {
         this.setLanguage(newLang);
         // Stäng menyn efter val, detta anrop sker i slutet av setLanguage
-        this.shadowRoot.querySelector('.dropdown').classList.remove('open'); 
+        this.shadowRoot.querySelector('.dropdown').classList.remove('open');
     }
 
     updateMainButtonDisplay() {
@@ -89,7 +101,7 @@ class LanguageToggle extends HTMLElement {
         if (!button) return;
 
         const currentFlag = FLAG_MAP[this.currentLang] || this.currentLang.toUpperCase();
-        
+
         // Här kan du välja hur knappen ska se ut (Flagga + Pil)
         button.innerHTML = `${currentFlag} <span class="arrow">▼</span>`;
     }
