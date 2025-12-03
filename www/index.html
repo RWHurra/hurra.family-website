@@ -10,25 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
-    <script src="/components/theme-toggle.js" defer></script>
-    <script src="/components/header.js" defer></script>
-    <script src="/components/footer.js" defer></script>
-    <script src="/components/hero.js" defer></script>
+    <script src="/components/components-bundle.js" type="module" defer></script>
 
 </head>
 
 <body>
     <t-header> </t-header>
     <t-hero>
-        <h1 slot="hero-title">välkommen till hurra.family</h1>
-        <h2 slot="hero-heading">aktiv sedan 2025-11</h2>
+        <h1 slot="hero-title" lang="sv" class="i18n">välkommen till hurra.family</h1>
+        <h1 slot="hero-title" lang="en" class="i18n">welcome to hurra.family</h1>
+        <h1 slot="hero-title" lang="sr" class="i18n">добродошли на hurra.family</h1>
 
-        <p slot="hero-body">vi är en familj som bor i Solna</p>
-        <p slot="hero-body">denna domän är främst för experimentering med homelab</p>
-        <p slot="hero-body">här kan du hitta allmän information om oss</p>
+        <h2 slot="hero-heading" lang="sv" class="i18n">aktiv sedan 2025-11</h2>
+        <h2 slot="hero-heading" lang="en" class="i18n">active since 2025-11</h2>
+        <h2 slot="hero-heading" lang="sr" class="i18n">активан од 2025-11</h2>
 
-        <a slot="hero-action" href="/about" class="cta cta-primary">vilka är vi?</a>
-        <a slot="hero-action" href="/contact" class="cta cta-secondary">hur når du oss?</a>
+        <p slot="hero-body" lang="sv" class="i18n">vi är en familj som bor i Solna</p>
+        <p slot="hero-body" lang="en" class="i18n">we are a family living in Solna</p>
+        <p slot="hero-body" lang="sr" class="i18n">ми смо породица која живи у Солни</p>
+
+        <p slot="hero-body" lang="sv" class="i18n">denna domän är främst för experimentering med homelab</p>
+        <p slot="hero-body" lang="en" class="i18n">this domain is primarily for experimentation with homelab</p>
+        <p slot="hero-body" lang="sr" class="i18n">овај домен је првенствено за експериментисање са хоумлабом</p>
+
+        <p slot="hero-body" lang="sv" class="i18n">här kan du hitta allmän information om oss</p>
+        <p slot="hero-body" lang="en" class="i18n">here you can find general information about us</p>
+        <p slot="hero-body" lang="sr" class="i18n">овде можете пронаћи опште информације о нама</p>
+
+        <a slot="hero-action" href="/about" class="cta cta-primary i18n" lang="sv">vilka är vi?</a>
+        <a slot="hero-action" href="/about" class="cta cta-primary i18n" lang="en">who are we?</a>
+        <a slot="hero-action" href="/about" class="cta cta-primary i18n" lang="sr">ко смо ми?</a>
+
+        <a slot="hero-action" href="/contact" class="cta cta-secondary i18n" lang="sv">hur når du oss?</a>
+        <a slot="hero-action" href="/contact" class="cta cta-secondary i18n" lang="en">how can you reach us?</a>
+        <a slot="hero-action" href="/contact" class="cta cta-secondary i18n" lang="sr">како можете да нас
+            контактирате?</a>
     </t-hero>
     <t-footer> </t-footer>
 </body>
