@@ -1,32 +1,21 @@
-/* /components/language-toggle.css */
-
 :host {
     position: relative;
     display: inline-block;
     font: var(--p);
-    /* Använd global font */
 }
 
 .main-toggle {
-    /* Stil för knappen som syns hela tiden */
     padding: var(--spacing3) var(--spacing4);
-    /* Använd spacing-variabler */
-
     background-color: var(--bg-light);
-    /* Använd ljusare bakgrund */
     color: var(--text);
-    /* Använd textfärg */
 
     border: 1px solid var(--border);
-    /* Använd border-färg */
     border-radius: var(--spacing2);
-    /* Använd runda hörn */
 
     cursor: pointer;
     font-size: 1rem;
     line-height: 1;
     transition: var(--theme-transition);
-    /* Använd global transition */
 }
 
 .main-toggle:hover {
@@ -39,23 +28,20 @@
 }
 
 .dropdown {
-    /* Styling för dropdown-menyn */
     position: absolute;
     top: 100%;
-    left: 0;
+    left: auto;
+    right: 0;
     z-index: 1000;
 
     list-style: none;
     padding: 0;
     margin: var(--spacing2) 0 0 0;
-    /* Använd spacing2 */
 
     background-color: var(--bg);
-    /* Använd bakgrundsfärg */
     border: 1px solid var(--border);
     border-radius: var(--spacing2);
     box-shadow: 0 4px var(--spacing2) rgba(0, 0, 0, 0.3);
-    /* Mörkare skugga för kontrast mot bakgrund */
 
     display: none;
     min-width: 150px;
@@ -74,34 +60,25 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--spacing3);
-    /* Använd spacing3 */
     transition: background-color 0.2s;
 }
 
 .dropdown li:hover {
     background-color: var(--highlight);
-    /* Använd highlight för hover-färg */
 }
 
 .dropdown li.selected {
     background-color: var(--primary);
-    /* Använd primärfärg för valt språk */
     color: var(--bg-dark);
-    /* Byt färg på texten när den är markerad */
     font-weight: bold;
 }
 
 .dropdown li.selected::after {
-    /* NYTT: Lägg till bock-tecknet */
     content: "🗸";
-    /* Eller "\2713" */
     font-size: 1.2em;
     color: var(--bg-dark);
-    /* Färgen på bocken */
 }
 
-/* Du kan också behöva dölja bocken på hover om du vill att den ska vara kvar 
-   när du håller musen över ett annat språk: */
 .dropdown li:not(.selected):hover::after {
     content: "";
 }

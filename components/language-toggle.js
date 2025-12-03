@@ -11,9 +11,12 @@ class LanguageToggle extends HTMLElement {
 
         this.defaultLang = this.getAttribute('default-lang') || 'sv';
 
+        // get all elements with lang attribute in the document
         const langElements = document.querySelectorAll('[lang]');
 
         const detectedLangs = new Set();
+
+        // populate detectedLangs set with unique lang codes
         langElements.forEach(el => {
             const langCode = el.getAttribute('lang').trim();
             if (langCode) {
@@ -27,6 +30,7 @@ class LanguageToggle extends HTMLElement {
             this.availableLangs = [this.defaultLang];
         }
 
+        //check if userLang is stored in localStorage and is in availableLangs
         this.currentLang = this.availableLangs.includes(localStorage.getItem('userLang'))
             ? localStorage.getItem('userLang')
             : this.defaultLang;
@@ -35,31 +39,26 @@ class LanguageToggle extends HTMLElement {
         this.updatePageLanguage(this.currentLang);
     }
 
-    // FUNKTIONERNA getToggleLang() och toggleLanguage() ÄR BORTTAGNA
-
     render() {
-        // 1. Skapa huvudknappen (Visar alltid det aktuella språket)
         const mainButton = document.createElement('button');
         mainButton.classList.add('main-toggle');
         mainButton.addEventListener('click', () => this.toggleDropdown());
 
-        // 2. Skapa dropdown-menyn
         const dropdownMenu = document.createElement('ul');
         dropdownMenu.classList.add('dropdown');
 
-        // 3. Fyll menyn med ett listobjekt (li) för varje tillgängligt språk
+        // create list items for each available language
         this.availableLangs.forEach(lang => {
             const li = document.createElement('li');
             li.dataset.lang = lang;
-            // Använd FLAG_MAP för att få emojin och lägg till text
             li.textContent = `${FLAG_MAP[lang] || lang.toUpperCase()} ${lang.toUpperCase()}`;
 
-            // Markera det initialt valda språket
+            // select the current language
             if (lang === this.currentLang) {
                 li.classList.add('selected');
             }
 
-            // Lägg till klickhändelse för att byta språk
+            // add click event to select language
             li.addEventListener('click', (e) => this.selectLanguage(e.currentTarget.dataset.lang));
 
             dropdownMenu.appendChild(li);
@@ -69,15 +68,13 @@ class LanguageToggle extends HTMLElement {
         link.setAttribute('rel', 'stylesheet');
         link.setAttribute('href', '/components/language-toggle.css');
 
-        // 4. Lägg till allt i Shadow DOM
         this.shadowRoot.append(link, mainButton, dropdownMenu);
 
-        // 5. Initial uppdatering av huvudknappen
         this.updateMainButtonDisplay();
 
-        // Stäng menyn om man klickar utanför komponenten (lyssnar på hela dokumentet)
+        // close dropdown when clicking outside the component
         document.addEventListener('click', (e) => {
-            // Kontrollerar om klicket ÄR INUTI komponenten eller dess Shadow DOM
+            // check if click was inside the component
             const isInside = this.contains(e.target) || e.composedPath().includes(this);
 
             if (!isInside) {
@@ -92,8 +89,14 @@ class LanguageToggle extends HTMLElement {
 
     selectLanguage(newLang) {
         this.setLanguage(newLang);
-        // Stäng menyn efter val, detta anrop sker i slutet av setLanguage
+        // close dropwdown after selection
         this.shadowRoot.querySelector('.dropdown').classList.remove('open');
+
+        // dispatch a custom event to notify about the language change
+        this.dispatchEvent(new CustomEvent('language-selected', {
+            bubbles: true,   // let event bubble up through the DOM
+            composed: true   // let event cross shadow DOM boundaries
+        }));
     }
 
     updateMainButtonDisplay() {
@@ -101,8 +104,6 @@ class LanguageToggle extends HTMLElement {
         if (!button) return;
 
         const currentFlag = FLAG_MAP[this.currentLang] || this.currentLang.toUpperCase();
-
-        // Här kan du välja hur knappen ska se ut (Flagga + Pil)
         button.innerHTML = `${currentFlag} <span class="arrow">▼</span>`;
     }
 
@@ -112,13 +113,11 @@ class LanguageToggle extends HTMLElement {
         this.currentLang = newLang;
         localStorage.setItem('userLang', newLang);
 
-        // 1. Uppdatera sidans språk (triggar den globala CSS:en)
         this.updatePageLanguage(newLang);
 
-        // 2. Uppdatera huvudknappens utseende
         this.updateMainButtonDisplay();
 
-        // 3. Uppdatera markeringen i dropdown-listan
+        // update selected class in dropdown
         this.shadowRoot.querySelectorAll('li').forEach(li => {
             li.classList.remove('selected');
             if (li.dataset.lang === newLang) {

@@ -50,13 +50,33 @@ class THeader extends HTMLElement {
             </div>
         </header>
         `;
+
+        const languageToggle = this.querySelector('language-toggle');
+
         this.setupHamburger();
+
+        // prevent click events on language toggle from propagating to hamburger menu
+        if (languageToggle) {
+            languageToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            // listen for custom events from language-toggle component
+            languageToggle.addEventListener('language-selected', (e) => {
+                const toggle = this.toggleFunction;
+                if (typeof toggle === 'function') {
+                    this.toggleFunction();
+                }
+            });
+        }
+
     }
 
     setupHamburger() {
         const ham = this.querySelector(".ham");
         const path = this.querySelector("#ham-icon path");
         const nav = this.querySelector(".site-nav");
+
         ham.addEventListener("click", toggle);
         nav.addEventListener("click", toggle);
 
@@ -69,6 +89,9 @@ class THeader extends HTMLElement {
             path.setAttribute("d", newPath);
             nav.classList.toggle("show");
         }
+        
+        // store reference to toggle function for external use
+        this.toggleFunction = toggle;
     }
 
     static getCurrentSubdomain() {
