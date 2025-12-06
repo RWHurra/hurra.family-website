@@ -10,38 +10,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
-    <script src="/components/theme-toggle.js" defer></script>
-    <script src="/components/header.js" defer></script>
-    <script src="/components/footer.js" defer></script>
-    <script src="/components/section.js" defer></script>
-    <script src="/components/card.js" defer></script>
-    <script src="/components/card-grid.js" defer></script>
+    <script src="/components/components-bundle.js" type="module" defer></script>
 
 </head>
 
 <body>
     <t-header> </t-header>
     <t-section>
-        <h1 slot="section-title">kontakta oss</h1>
-        <h2 slot="section-description">du når oss enklast via följande adresser</h2>
+        <h1 slot="section-title" class="i18n" lang="sv">kontakta oss</h1>
+        <h1 slot="section-title" class="i18n" lang="en">contact us</h1>
+        <h1 slot="section-title" class="i18n" lang="sr">контактирајте нас</h1>
+
+        <h2 slot="section-description" class="i18n" lang="sv">du når oss enklast via följande adresser</h2>
+        <h2 slot="section-description" class="i18n" lang="en">you can reach us easily via the following addresses</h2>
+        <h2 slot="section-description" class="i18n" lang="sr">најлакше нас можете контактирати путем следећих адреса
+        </h2>
 
         <div slot="section-body">
             <t-card-grid>
                 <t-card>
-                    <h2 slot="card-title">pappa</h2>
-                    <a slot="card-action" class="cta cta-primary" href="mailto:robert@hurra.family">robert at hurra dot
+                    <h2 slot="card-title" class="i18n" lang="sv">pappa</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">dad</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">тата</h2>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv"
+                        href="mailto:robert@hurra.family">robert at hurra dot
+                        family</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en"
+                        href="mailto:robert@hurra.family">robert at hurra dot
+                        family</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr"
+                        href="mailto:robert@hurra.family">robert at hurra dot
                         family</a>
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">mamma</h2>
-                    <a slot="card-action" class="cta cta-primary" href="mailto:jovana@hurra.family">jovana at hurra dot
+                    <h2 slot="card-title" class="i18n" lang="sv">mamma</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">mom</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">мама</h2>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv"
+                        href="mailto:jovana@hurra.family">jovana at hurra dot
+                        family</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en"
+                        href="mailto:jovana@hurra.family">jovana at hurra dot
+                        family</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr"
+                        href="mailto:jovana@hurra.family">jovana at hurra dot
                         family</a>
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">generellt</h2>
-                    <a slot="card-action" class="cta cta-primary" href="mailto:email@hurra.family">email at hurra dot
+                    <h2 slot="card-title" class="i18n" lang="sv">generellt</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">general</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">опште</h2>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv" href="mailto:email@hurra.family">email
+                        at hurra dot
+                        family</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en" href="mailto:email@hurra.family">email
+                        at hurra dot
+                        family</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr" href="mailto:email@hurra.family">email
+                        at hurra dot
                         family</a>
                 </t-card>
             </t-card-grid>

@@ -10,12 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
-    <script src="/components/theme-toggle.js" defer></script>
-    <script src="/components/header.js" defer></script>
-    <script src="/components/footer.js" defer></script>
-    <script src="/components/section.js" defer></script>
-    <script src="/components/card.js" defer></script>
-    <script src="/components/card-grid.js" defer></script>
+    <script src="/components/components-bundle.js" type="module" defer></script>
 </head>
 
 <body>
@@ -71,6 +66,7 @@
 
                 <t-card>
                     <h2 slot="card-title">master</h2>
+                    <p slot="card-title">Kungliga Tekniska Högskolan</p>
                     <p slot="card-body">teknisk fysik, inriktning optisk fysik</p>
                     <li slot="card-bullet">examen 2014</li>
                     <li slot="card-bullet">master thesis: Narrow Linewidth All-fiberCavity Thulium Fiber Laser at 2 µm
@@ -82,6 +78,7 @@
 
                 <t-card>
                     <h2 slot="card-title">bachelor</h2>
+                    <p slot="card-title">Kungliga Tekniska Högskolan</p>
                     <p slot="card-body">mikroelektronik</p>
                     <li slot="card-bullet">bachelor thesis: Fabrication of Carbon Nanotube Doped Thin Films for Laser
                         Applications</li>
@@ -161,7 +158,7 @@
                             href="https://sundsvall.se/" target="_blank">Sundsvall Kommun</a></li>
                     <li slot="card-bullet">systemarkitektur</li>
                     <li slot="card-bullet">verksamhetsarkitektur</li>
-                    <li slot="card-bullet">informationsarkiutektur</li>
+                    <li slot="card-bullet">informationsarkitektur</li>
                     <a slot="card-action" class="cta cta-secondary" href="https://www.arway.se/"
                         target="_blank">aRway</a>
                 </t-card>

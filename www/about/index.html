@@ -10,54 +10,128 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
-    <script src="/components/theme-toggle.js" defer></script>
-    <script src="/components/header.js" defer></script>
-    <script src="/components/footer.js" defer></script>
-    <script src="/components/section.js" defer></script>
-    <script src="/components/card.js" defer></script>
-    <script src="/components/card-grid.js" defer></script>
+    <script src="/components/components-bundle.js" type="module" defer></script>
 </head>
 
 <body>
     <t-header> </t-header>
     <t-section>
-        <h1 slot="section-title">vår familj</h1>
-        <h2 slot="section-description">vi är en familj i Solna som består av två barn och två vuxna</h2>
+        <h1 slot="section-title" class="i18n" lang="sv">vår familj</h1>
+        <h1 slot="section-title" class="i18n" lang="en">our family</h1>
+        <h1 slot="section-title" class="i18n" lang="sr">наша породица</h1>
+
+        <h2 slot="section-description" class="i18n" lang="sv">vi är en familj i Solna som består av två barn och två
+            vuxna</h2>
+        <h2 slot="section-description" class="i18n" lang="en">we are a family in Solna consisting of two children and
+            two adults</h2>
+        <h2 slot="section-description" class="i18n" lang="sr">ми смо породица у Солни која се састоји од двоје деце и
+            две одрасле особе</h2>
 
         <div slot="section-body">
             <t-card-grid>
                 <t-card>
-                    <h2 slot="card-title">pappa</h2>
-                    <p slot="card-body">Robert</p>
-                    <li slot="card-bullet">verksamhetsarkitekt</li>
-                    <li slot="card-bullet">basketspelare</li>
-                    <li slot="card-bullet">homelabbare</li>
-                    <a slot="card-action" class="cta cta-primary" href="//robert.hurra.family">läs mer</a>
-                    <a slot="card-action" class="cta cta-secondary" href="mailto:robert@hurra.family">kontakta</a>
+                    <h2 slot="card-title" class="i18n" lang="sv">pappa</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">dad</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">тата</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">Robert</p>
+                    <p slot="card-body" class="i18n" lang="en">Robert</p>
+                    <p slot="card-body" class="i18n" lang="sr">Роберт</p>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">verksamhetsarkitekt</li>
+                    <li slot="card-bullet" class="i18n" lang="en">enterprise architect</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">архитекта предузећа</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">basketspelare</li>
+                    <li slot="card-bullet" class="i18n" lang="en">basketball player</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">кошаркаш</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">homelabbare</li>
+                    <li slot="card-bullet" class="i18n" lang="en">homelabber</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">хоумлабер</li>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv" href="//robert.hurra.family">läs
+                        mer</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en" href="//robert.hurra.family">read
+                        more</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr" href="//robert.hurra.family">читај
+                        више</a>
+
+                    <!-- <a slot="card-action" class="cta cta-secondary i18n" lang="sv"
+                        href="mailto:robert@hurra.family">kontakta</a>
+                    <a slot="card-action" class="cta cta-secondary i18n" lang="en"
+                        href="mailto:robert@hurra.family">contact</a>
+                    <a slot="card-action" class="cta cta-secondary i18n" lang="sr"
+                        href="mailto:robert@hurra.family">контактирај</a> -->
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">mamma</h2>
-                    <p slot="card-body">Jovana</p>
-                    <li slot="card-bullet">teknisk testare</li>
-                    <li slot="card-bullet">organisatör</li>
-                    <li slot="card-bullet">bäst ❤️</li>
-                    <a slot="card-action" class="cta cta-primary" href="#">läs mer</a>
-                    <a slot="card-action" class="cta cta-secondary" href="mailto:jovana@hurra.family">kontakta</a>
+                    <h2 slot="card-title" class="i18n" lang="sv">mamma</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">mom</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">мама</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">Jovana</p>
+                    <p slot="card-body" class="i18n" lang="en">Jovana</p>
+                    <p slot="card-body" class="i18n" lang="sr">Јована</p>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">teknisk testare</li>
+                    <li slot="card-bullet" class="i18n" lang="en">technical tester</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">технички тестер</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">organisatör</li>
+                    <li slot="card-bullet" class="i18n" lang="en">organiser</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">организатор</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">bäst ❤️</li>
+                    <li slot="card-bullet" class="i18n" lang="en">best ❤️</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">најбоља ❤️</li>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv" href="#">läs mer</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en" href="#">read more</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr" href="#">читај више</a>
+
+                    <!-- <a slot="card-action" class="cta cta-secondary i18n" lang="sv"
+                        href="mailto:jovana@hurra.family">kontakta</a>
+                    <a slot="card-action" class="cta cta-secondary i18n" lang="en"
+                        href="mailto:jovana@hurra.family">contact</a>
+                    <a slot="card-action" class="cta cta-secondary i18n" lang="sr"
+                        href="mailto:jovana@hurra.family">контактирај</a> -->
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">son</h2>
-                    <li slot="card-bullet">väldigt nyfiken</li>
-                    <li slot="card-bullet">gott om energi</li>
-                    <li slot="card-bullet">sitter aldrig stilla</li>
+                    <h2 slot="card-title" class="i18n" lang="sv">son</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">son</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">син</h2>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">väldigt nyfiken</li>
+                    <li slot="card-bullet" class="i18n" lang="en">very curious</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">веома радознао</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">gott om energi</li>
+                    <li slot="card-bullet" class="i18n" lang="en">lots of energy</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">пуно енергије</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">sitter aldrig stilla</li>
+                    <li slot="card-bullet" class="i18n" lang="en">never sits still</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">никад не седи мирно</li>
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">dotter</h2>
-                    <li slot="card-bullet">älskar att äta</li>
-                    <li slot="card-bullet">tycker om att mysa</li>
-                    <li slot="card-bullet">vill alltid ha mamma</li>
+                    <h2 slot="card-title" class="i18n" lang="sv">dotter</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">daughter</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">ћерка</h2>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">älskar att äta</li>
+                    <li slot="card-bullet" class="i18n" lang="en">loves to eat</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">воли да једе</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">tycker om att mysa</li>
+                    <li slot="card-bullet" class="i18n" lang="en">likes to cuddle</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">воли да се мази</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">vill alltid ha mamma</li>
+                    <li slot="card-bullet" class="i18n" lang="en">always wants mom</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">увек хоће маму</li>
                 </t-card>
             </t-card-grid>
         </div>

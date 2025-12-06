@@ -10,25 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
-    <script src="/components/theme-toggle.js" defer></script>
-    <script src="/components/header.js" defer></script>
-    <script src="/components/footer.js" defer></script>
-    <script src="/components/hero.js" defer></script>
+    <script src="/components/components-bundle.js" type="module" defer></script>
 
 </head>
 
 <body>
     <t-header> </t-header>
     <t-hero>
-        <h1 slot="hero-title">jag heter Robert</h1>
-        <h2 slot="hero-heading">jag är en mångsysslare</h2>
+        <h1 slot="hero-title" class="i18n" lang="sv">jag heter Robert</h1>
+        <h1 slot="hero-title" class="i18n" lang="en">my name is Robert</h1>
+        <h1 slot="hero-title" class="i18n" lang="sr">ја се зовем Роберт</h1>
 
-        <p slot="hero-body">jag har ett homelab och self-hostar</p>
-        <p slot="hero-body">jag gejmar, spelar basket och schack</p>
-        <p slot="hero-body">jag är verksamhetsarkitekt med diverse certifieringar</p>
+        <h2 slot="hero-heading" class="i18n" lang="sv">jag är en mångsysslare</h2>
+        <h2 slot="hero-heading" class="i18n" lang="en">I am a jack-of-all-trades</h2>
+        <h2 slot="hero-heading" class="i18n" lang="sr">ја сам свестрана особа</h2>
 
-        <a slot="hero-action" href="/about" class="cta cta-primary">vem är jag?</a>
-        <a slot="hero-action" href="/leisure" class="cta cta-secondary">vad gör jag?</a>
+        <p slot="hero-body" class="i18n" lang="sv">jag har ett homelab och self-hostar</p>
+        <p slot="hero-body" class="i18n" lang="en">I have a homelab and self-host</p>
+        <p slot="hero-body" class="i18n" lang="sr">имам хоумлаб и сам хостујем</p>
+
+        <p slot="hero-body" class="i18n" lang="sv">jag gejmar, spelar basket och schack</p>
+        <p slot="hero-body" class="i18n" lang="en">I game, play basketball and chess</p>
+        <p slot="hero-body" class="i18n" lang="sr">играм игрице, кошарку и шах</p>
+
+        <p slot="hero-body" class="i18n" lang="sv">jag är verksamhetsarkitekt med diverse certifieringar</p>
+        <p slot="hero-body" class="i18n" lang="en">I am an enterprise architect with various certifications</p>
+        <p slot="hero-body" class="i18n" lang="sr">ја сам архитекта предузећа са разним сертификатима</p>
+
+        <a slot="hero-action" href="/about" class="cta cta-primary i18n" lang="sv">vem är jag?</a>
+        <a slot="hero-action" href="/about" class="cta cta-primary i18n" lang="en">who am I?</a>
+        <a slot="hero-action" href="/about" class="cta cta-primary i18n" lang="sr">ко сам ја?</a>
+
+        <a slot="hero-action" href="/leisure" class="cta cta-secondary i18n" lang="sv">vad gör jag?</a>
+        <a slot="hero-action" href="/leisure" class="cta cta-secondary i18n" lang="en">what do I do?</a>
+        <a slot="hero-action" href="/leisure" class="cta cta-secondary i18n" lang="sr">шта радим?</a>
     </t-hero>
     <t-footer> </t-footer>
 </body>

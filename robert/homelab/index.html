@@ -10,26 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
-    <script src="/components/theme-toggle.js" defer></script>
-    <script src="/components/header.js" defer></script>
-    <script src="/components/footer.js" defer></script>
-    <script src="/components/section.js" defer></script>
-    <script src="/components/card.js" defer></script>
-    <script src="/components/card-grid.js" defer></script>
-
+    <script src="/components/components-bundle.js" type="module" defer></script>
 </head>
 
 <body>
     <t-header> </t-header>
     <t-section>
         <h1 slot="section-title">🖥</h1>
-        <h2 slot="section-description">homelab</h2>
+        <h2 slot="section-description" class="i18n" lang="sv">homelab</h2>
+        <h2 slot="section-description" class="i18n" lang="en">homelab</h2>
+        <h2 slot="section-description" class="i18n" lang="sr">хоумлаб</h2>
 
         <div slot="section-body">
             <t-card-grid>
                 <t-card>
-                    <h2 slot="card-title">virtualization</h2>
-                    <p slot="card-body">i brist på hårdvara har jag mycket virtualiseringar</p>
+                    <h2 slot="card-title" class="i18n" lang="sv">virtualization</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">virtualization</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">виртуализација</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">i brist på hårdvara har jag mycket virtualiseringar</p>
+                    <p slot="card-body" class="i18n" lang="en">due to lack of hardware, I have many virtualizations</p>
+                    <p slot="card-body" class="i18n" lang="sr">због недостатка хардвера, имам много виртуелизација</p>
+
                     <li slot="card-bullet">proxmox virtual environment</li>
                     <li slot="card-bullet">proxmox backup server</li>
                     <li slot="card-bullet">ubuntu server</li>
@@ -38,8 +40,14 @@
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">containers</h2>
-                    <p slot="card-body">alla tjänster är via docker compose</p>
+                    <h2 slot="card-title" class="i18n" lang="sv">containers</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">containers</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">контејнери</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">alla tjänster är via docker compose</p>
+                    <p slot="card-body" class="i18n" lang="en">all services are via docker compose</p>
+                    <p slot="card-body" class="i18n" lang="sr">све услуге су преко докер компоуза</p>
+
                     <li slot="card-bullet">adguard home</li>
                     <li slot="card-bullet">nginx proxy manager</li>
                     <li slot="card-bullet">wireguard</li>
@@ -48,8 +56,14 @@
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">automation</h2>
-                    <p slot="card-body">jag försöker automatisera och re-use där jag kan</p>
+                    <h2 slot="card-title" class="i18n" lang="sv">automation</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">automation</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">аутоматизација</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">jag försöker automatisera och återanvända där jag kan</p>
+                    <p slot="card-body" class="i18n" lang="en">I try to automate and re-use where I can</p>
+                    <p slot="card-body" class="i18n" lang="sr">покушавам да аутоматизујем и поново користим где могу</p>
+
                     <li slot="card-bullet">home assistant</li>
                     <li slot="card-bullet">js web components</li>
                     <li slot="card-bullet">scripts</li>

@@ -10,50 +10,107 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
-    <script src="/components/theme-toggle.js" defer></script>
-    <script src="/components/header.js" defer></script>
-    <script src="/components/footer.js" defer></script>
-    <script src="/components/section.js" defer></script>
-    <script src="/components/card.js" defer></script>
-    <script src="/components/card-grid.js" defer></script>
+    <script src="/components/components-bundle.js" type="module" defer></script>
 
 </head>
 
 <body>
     <t-header> </t-header>
     <t-section>
-        <h1 slot="section-title">Fritid</h1>
-        <h2 slot="section-description">vad jag gör på min fritid</h2>
+        <h1 slot="section-title" class="i18n" lang="sv">fritid</h1>
+        <h1 slot="section-title" class="i18n" lang="en">leisure time</h1>
+        <h1 slot="section-title" class="i18n" lang="sr">слободно време</h1>
+
+        <h2 slot="section-description" class="i18n" lang="sv">vad jag gör på min fritid</h2>
+        <h2 slot="section-description" class="i18n" lang="en">what I do in my leisure time</h2>
+        <h2 slot="section-description" class="i18n" lang="sr">шта радим у слободно време</h2>
 
         <div slot="section-body">
             <t-card-grid>
                 <t-card>
-                    <h2 slot="card-title">🏀 basket</h2>
-                    <p slot="card-body">jag spelar basket och har även coachat</p>
-                    <li slot="card-bullet">började spela basket 1988</li>
-                    <li slot="card-bullet">coachat och utbildad via Svenska Basketbollförbundet</li>
-                    <li slot="card-bullet">spelar just nu med AIK Vets</li>
-                    <a slot="card-action" class="cta cta-primary"
+                    <h2 slot="card-title" class="i18n" lang="sv">🏀 basket</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">🏀 basketball</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">🏀 кошарка</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">jag spelar basket och har även coachat</p>
+                    <p slot="card-body" class="i18n" lang="en">I play basketball and have also coached</p>
+                    <p slot="card-body" class="i18n" lang="sr">играм кошарку и такође сам тренирао</p>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">började spela basket 1998</li>
+                    <li slot="card-bullet" class="i18n" lang="en">started playing basketball in 1998</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">почео сам да играм кошарку 1998</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">coachat och utbildad via Svenska Basketbollförbundet
+                    </li>
+                    <li slot="card-bullet" class="i18n" lang="en">coached and educated via the Swedish Basketball
+                        Federation</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">тренирао и образован преко Шведског кошаркашког савеза
+                    </li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">spelar just nu med AIK Vets</li>
+                    <li slot="card-bullet" class="i18n" lang="en">currently playing with AIK Vets</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">тренутно играм са АИК Ветс</li>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv"
                         href="https://www.profixio.com/app/lx/competition/leagueid17541/teams/1410762"
                         target="_blank">nuvarande säsong</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en"
+                        href="https://www.profixio.com/app/lx/competition/leagueid17541/teams/1410762"
+                        target="_blank">current season</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr"
+                        href="https://www.profixio.com/app/lx/competition/leagueid17541/teams/1410762"
+                        target="_blank">тренутна сезона</a>
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">♟️ schack</h2>
-                    <p slot="card-body">spelat schack många år, men inget seriöst</p>
-                    <li slot="card-bullet">spelar främst bullet</li>
-                    <li slot="card-bullet">spelar over-the-board med vänner</li>
-                    <a slot="card-action" class="cta cta-primary" href="https://lichess.org/@/RobbasGaming"
-                        target="_blank">lichess profil</a>
+                    <h2 slot="card-title" class="i18n" lang="sv">♟️ schack</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">♟️ chess</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">♟️ шах</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">spelat schack många år, men inget seriöst</p>
+                    <p slot="card-body" class="i18n" lang="en">played chess for many years, but nothing serious</p>
+                    <p slot="card-body" class="i18n" lang="sr">играм шах дуги низ година, али ништа озбиљно</p>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">spelar främst bullet</li>
+                    <li slot="card-bullet" class="i18n" lang="en">primarily plays bullet</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">углавном играм булет</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">spelar over-the-board med vänner</li>
+                    <li slot="card-bullet" class="i18n" lang="en">plays over-the-board with friends</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">играм шах уживо са пријатељима</li>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv"
+                        href="https://lichess.org/@/RobbasGaming" target="_blank">lichess profil</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en"
+                        href="https://lichess.org/@/RobbasGaming" target="_blank">lichess profile</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr"
+                        href="https://lichess.org/@/RobbasGaming" target="_blank">личесс профил</a>
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">🖥 homelab</h2>
-                    <p slot="card-body">sedan 2025-11 har jag ett homelab</p>
-                    <li slot="card-bullet">virtualization</li>
-                    <li slot="card-bullet">containers</li>
-                    <li slot="card-bullet">automation</li>
-                    <a slot="card-action" class="cta cta-primary" href="/homelab">se detaljer</a>
+                    <h2 slot="card-title" class="i18n" lang="sv">🖥 homelab</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">🖥 homelab</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">🖥 хоумлаб</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">sedan 2025-11 har jag ett homelab</p>
+                    <p slot="card-body" class="i18n" lang="en">I have had a homelab since 2025-11</p>
+                    <p slot="card-body" class="i18n" lang="sr">имам хоумлаб од 2025-11</p>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">virtualization</li>
+                    <li slot="card-bullet" class="i18n" lang="en">virtualization</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">виртуализација</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">containers</li>
+                    <li slot="card-bullet" class="i18n" lang="en">containers</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">контејнери</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">automation</li>
+                    <li slot="card-bullet" class="i18n" lang="en">automation</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">аутоматизација</li>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv" href="/homelab">se detaljer</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en" href="/homelab">see details</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr" href="/homelab">погледај детаље</a>
 
                 </t-card>
 
