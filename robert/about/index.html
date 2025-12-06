@@ -10,48 +10,100 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
-    <script src="/components/theme-toggle.js" defer></script>
-    <script src="/components/header.js" defer></script>
-    <script src="/components/footer.js" defer></script>
-    <script src="/components/section.js" defer></script>
-    <script src="/components/card.js" defer></script>
-    <script src="/components/card-grid.js" defer></script>
+    <script src="/components/components-bundle.js" type="module" defer></script>
 
 </head>
 
 <body>
     <t-header> </t-header>
     <t-section>
-        <h1 slot="section-title">Robert Hurra</h1>
-        <h2 slot="section-description">verksamhetsarkitekt med många hobbies</h2>
+        <h1 slot="section-title" class="i18n" lang="sv">Robert Hurra</h1>
+        <h1 slot="section-title" class="i18n" lang="en">Robert Hurra</h1>
+        <h1 slot="section-title" class="i18n" lang="sr">Роберт Хурра</h1>
+
+        <h2 slot="section-description" class="i18n" lang="sv">verksamhetsarkitekt med många hobbies</h2>
+        <h2 slot="section-description" class="i18n" lang="en">enterprise architect with many hobbies</h2>
+        <h2 slot="section-description" class="i18n" lang="sr">архитекта предузећа са много хобија</h2>
 
         <div slot="section-body">
             <t-card-grid>
                 <t-card>
-                    <h2 slot="card-title">fritid</h2>
-                    <p slot="card-body">jag gör mycket olika saker</p>
-                    <li slot="card-bullet">basket</li>
-                    <li slot="card-bullet">schack</li>
-                    <li slot="card-bullet">homelab</li>
-                    <a slot="card-action" class="cta cta-primary" href="/leisure">läs mer</a>
+                    <h2 slot="card-title" class="i18n" lang="sv">fritid</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">leisure time</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">слободно време</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">jag gör mycket olika saker</p>
+                    <p slot="card-body" class="i18n" lang="en">I do many different things</p>
+                    <p slot="card-body" class="i18n" lang="sr">радим много различитих ствари</p>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">basket</li>
+                    <li slot="card-bullet" class="i18n" lang="en">basketball</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">кошарка</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">schack</li>
+                    <li slot="card-bullet" class="i18n" lang="en">chess</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">шах</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">homelab</li>
+                    <li slot="card-bullet" class="i18n" lang="en">homelab</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">хоумлаб</li>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv" href="/leisure">läs mer</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en" href="/leisure">read more</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr" href="/leisure">читај више</a>
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">erfarenhet</h2>
-                    <p slot="card-body">jag är verksamhetsarkitekt med diverse certifieringar</p>
-                    <li slot="card-bullet">verksamhetsarkitekt</li>
-                    <li slot="card-bullet">certifierad kravingenjör</li>
-                    <li slot="card-bullet">certifierad SAFe Architect</li>
-                    <a slot="card-action" class="cta cta-primary" href="/resume">läs mer</a>
+                    <h2 slot="card-title" class="i18n" lang="sv">erfarenhet</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">experience</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">искуство</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">jag är verksamhetsarkitekt med diverse certifieringar</p>
+                    <p slot="card-body" class="i18n" lang="en">I am an enterprise architect with various certifications
+                    </p>
+                    <p slot="card-body" class="i18n" lang="sr">ја сам архитекта предузећа са разним сертификатима</p>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">verksamhetsarkitekt</li>
+                    <li slot="card-bullet" class="i18n" lang="en">enterprise architect</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">архитекта предузећа</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">certifierad kravingenjör</li>
+                    <li slot="card-bullet" class="i18n" lang="en">certified requirements engineer</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">сертификовани инжењер захтева</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">certifierad SAFe Architect</li>
+                    <li slot="card-bullet" class="i18n" lang="en">certified SAFe Architect</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">сертификовани SAFe архитекта</li>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv" href="/resume">läs mer</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en" href="/resume">read more</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr" href="/resume">читај више</a>
                 </t-card>
 
                 <t-card>
-                    <h2 slot="card-title">homelab</h2>
-                    <p slot="card-body">sedan 2025-11 har jag ett homelab</p>
-                    <li slot="card-bullet">virtualization</li>
-                    <li slot="card-bullet">containers</li>
-                    <li slot="card-bullet">automation</li>
-                    <a slot="card-action" class="cta cta-primary" href="/homelab">läs mer</a>
+                    <h2 slot="card-title" class="i18n" lang="sv">homelab</h2>
+                    <h2 slot="card-title" class="i18n" lang="en">homelab</h2>
+                    <h2 slot="card-title" class="i18n" lang="sr">хоумлаб</h2>
+
+                    <p slot="card-body" class="i18n" lang="sv">sedan 2025-11 har jag ett homelab</p>
+                    <p slot="card-body" class="i18n" lang="en">I have had a homelab since 2025-11</p>
+                    <p slot="card-body" class="i18n" lang="sr">имам хоумлаб од 2025-11</p>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">virtualization</li>
+                    <li slot="card-bullet" class="i18n" lang="en">virtualization</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">виртуализација</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">containers</li>
+                    <li slot="card-bullet" class="i18n" lang="en">containers</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">контејнери</li>
+
+                    <li slot="card-bullet" class="i18n" lang="sv">automation</li>
+                    <li slot="card-bullet" class="i18n" lang="en">automation</li>
+                    <li slot="card-bullet" class="i18n" lang="sr">аутоматизација</li>
+
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sv" href="/homelab">läs mer</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="en" href="/homelab">read more</a>
+                    <a slot="card-action" class="cta cta-primary i18n" lang="sr" href="/homelab">читај више</a>
 
                 </t-card>
 
