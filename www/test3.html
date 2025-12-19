@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Centrerad Barnlösning (Korrekt)</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        /* ==================================================
+        LIST RESET FÖR UL/LI
+        ==================================================
+        */
+        .ul-list-reset {
+            /* Tar bort listpunkterna */
+            list-style: none;
+            /* Tar bort standardmarginaler */
+            margin: 0;
+            /* Tar bort standardpadding (indrag) */
+            padding: 0;
+
+            /* Se till att UL spänner över hela den yttre containern */
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /* ==================================================
+        CSS GRID LÖSNINGEN (Gäller både DIV och UL/LI)
+        ==================================================
+        */
+
+        .grid-container {
+            display: grid;
+
+            /* NYCKELN: Skapar tre kolumner: Vänster-utrymme (1fr), 
+               Centrum-innehåll (auto), Höger-utrymme (1fr) */
+            grid-template-columns: 1fr auto 1fr;
+
+            width: 80%;
+            min-height: 50px;
+
+            border: 3px dashed #FF5733;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            padding: 15px 25px;
+            font-weight: bold;
+            font-size: 1.5em;
+            color: white;
+            white-space: nowrap;
+            /* Säkerställer vertikal centrering */
+            align-self: center;
+        }
+
+        .item-1 {
+            /* Element 1 placeras i mittkolumnen (kolumn 2) */
+            grid-column: 2;
+            background-color: #3498db;
+        }
+
+        .item-2 {
+            /* Element 2 placeras i kolumnen till höger (kolumn 3) */
+            grid-column: 3;
+            /* Tvingar Element 2 att starta direkt vid början av kolumn 3 */
+            justify-self: start;
+            background-color: #2ecc71;
+        }
+
+        /* ==================================================
+        TEST-CSS
+        ==================================================
+        */
+        h2 {
+            width: 80%;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .explanation {
+            margin-top: 30px;
+            padding: 15px;
+            width: 80%;
+            background-color: #f4f4f4;
+            border-left: 5px solid #3498db;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Grid Centreringstest: Element 1 Alltid Centrerat</h2>
+
+    <div class="grid-container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="item item-1">1: Centrerat innehåll med mycket mer text</div>
+        <div class="item item-2">2</div>
+    </div>
+
+    <ul class="grid-container ul-list-reset">
+        <li class="item item-1">1</li>
+        <li class="item item-2">2: Med UL/LI och mer information här</li>
+    </ul>
+
+
+    <div class="explanation">
+        <h3>Förklaring av Grid-lösningen:</h3>
+        <p>Denna lösning använder CSS Grid för att placera Element 1 i en dedikerad mittkolumn. Detta garanterar att
+            **Element 1:s mittpunkt** alltid ligger i containerns mitt.</p>
+        <ol>
+            <li>Containern får <code>display: grid;</code>.</li>
+            <li>Rutnätet definieras som <code>1fr auto 1fr;</code>, där <code>auto</code> är mittkolumnen som reserveras
+                för Element 1.</li>
+            <li>Element 1 placeras i kolumn 2 (mitten).</li>
+            <li>Element 2 placeras i kolumn 3 (höger) och dras till Element 1:s kant med
+                <code>justify-self: start;</code>.</li>
+        </ol>
+        <p>För **UL/LI-exemplet** (Test 3) appliceras <code>.grid-container</code> direkt på <code>&lt;ul&gt;</code>,
+            och extra CSS-regler (<code>.ul-list-reset</code>) tar bort listpunkter och standardmarginaler/padding.</p>
+    </div>
+
+</body>
+
+</html>

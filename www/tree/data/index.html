@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurra Family | tree data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../tree.css" /> 
+    <script src="/components/components-bundle.js" type="module" defer></script>
+</head>
+
+<body>
+    <t-header> </t-header>
+    <section>
+        <h1>Family Tree Data (JSON)</h1>
+        <p>Rådata för släktträdet som används för att bygga visualiseringen på <a href="../">trädsidan</a>.</p>
+
+        <div class="json-schema-container">
+            <h2>JSON-struktur: Array av Person-objekt</h2>
+
+            <dl>
+                <dt>Array ([])</dt>
+                <dd>
+                    — Innehåller <b>alla personer</b> i databasen. Varje person är ett unikt objekt med ett unikt ID.
+                    <dl>
+                        <dt>Person-objekt ({})</dt>
+                        <dd>
+                            — Innehåller biografisk data och relations-ID:n.
+                            <ul>
+                                <li><span class="key">id</span>: <code>String</code> - Unikt ID (används som referens).</li>
+                                <li><span class="key">firstName</span>: <code>String</code> - Förnamn.</li>
+                                <li><span class="key">lastName</span>: <code>String</code> - Efternamn.</li>
+                                <li><span class="key">birthDate</span>: <code>String</code> - Format YYYY-MM-DD (eller YYYY-??).</li>
+                                <li><span class="key">deathDate</span>: <code>String | null</code> - Dödsdatum om tillämpligt.</li>
+                                <li><span class="key">birthCountry</span>: <code>String</code> - ISO-kod för födelseland (t.ex. "SWE").</li>
+                                <li><span class="key">residenceCountry</span>: <code>String</code> - Nuvarande hemland.</li>
+                                <li><span class="key">citizenships</span>: <code>Array[String]</code> - Lista på medborgarskap.</li>
+                            </ul>
+
+                            <dl class="nested-list">
+                                <dt>Relationer (Referenser)</dt>
+                                <dd>
+                                    — Dessa fält mappar till <code>id</code> på andra objekt i samma array.
+                                    <ul>
+                                        <li><span class="key">motherId</span>: <code>String | null</code> - ID till modern.</li>
+                                        <li><span class="key">fatherId</span>: <code>String | null</code> - ID till fadern.</li>
+                                        <li><span class="key">spouseId</span>: <code>String | null</code> - ID till partner/make/maka.</li>
+                                        <li><span class="key">childrenIds</span>: <code>Array[String]</code> - Lista med ID:n till barn.</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </dd>
+            </dl>
+        </div>
+
+        <json-tree data="family-tree.json"> </json-tree>
+        
+    </section>
+    <t-footer> </t-footer>
+</body>
+
+</html>

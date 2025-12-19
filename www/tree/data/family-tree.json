@@ -1,0 +1,305 @@
+[
+    {
+        "id": "1",
+        "firstName": "Oskar Willy",
+        "lastName": "Hurra",
+        "birthDate": "2020-02-19",
+        "deathDate": null,
+        "birthCountry": "SWE",
+        "residenceCountry": "SWE",
+        "deathCountry": null,
+        "citizenships": [
+            "SWE"
+        ],
+        "motherId": "4",
+        "fatherId": "3",
+        "spouseId": null,
+        "childrenIds": []
+    },
+    {
+        "id": "2",
+        "firstName": "Saga Linnea Ines",
+        "lastName": "Hurra",
+        "birthDate": "2024-01-14",
+        "deathDate": null,
+        "birthCountry": "SWE",
+        "residenceCountry": "SWE",
+        "deathCountry": null,
+        "citizenships": [
+            "SWE"
+        ],
+        "motherId": "4",
+        "fatherId": "3",
+        "spouseId": null,
+        "childrenIds": []
+    },
+    {
+        "id": "3",
+        "firstName": "Robert Willy",
+        "lastName": "Hurra",
+        "birthDate": "1988-02-07",
+        "deathDate": null,
+        "birthCountry": "SWE",
+        "residenceCountry": "SWE",
+        "deathCountry": null,
+        "citizenships": [
+            "SWE"
+        ],
+        "motherId": "5",
+        "fatherId": "6",
+        "spouseId": "4",
+        "childrenIds": [
+            "1",
+            "2"
+        ]
+    },
+    {
+        "id": "4",
+        "firstName": "Jovana",
+        "lastName": "Hurra",
+        "birthDate": "1982-12-06",
+        "deathDate": null,
+        "birthCountry": "SRB",
+        "residenceCountry": "SWE",
+        "deathCountry": null,
+        "citizenships": [
+            "SRB",
+            "SWE"
+        ],
+        "motherId": "10",
+        "fatherId": "11",
+        "spouseId": "3",
+        "childrenIds": [
+            "1",
+            "2"
+        ]
+    },
+    {
+        "id": "5",
+        "firstName": "Solveig",
+        "lastName": "Hurra",
+        "birthDate": "1957-12-22",
+        "deathDate": null,
+        "birthCountry": "SWE",
+        "residenceCountry": "SWE",
+        "deathCountry": null,
+        "citizenships": [
+            "SWE"
+        ],
+        "motherId": "7",
+        "fatherId": "8",
+        "spouseId": "6",
+        "childrenIds": [
+            "3",
+            "12"
+        ]
+    },
+    {
+        "id": "6",
+        "firstName": "Rainer Ferdinand Willy",
+        "lastName": "Hurra",
+        "birthDate": "1958-06-16",
+        "deathDate": null,
+        "birthCountry": "AUT",
+        "residenceCountry": "SWE",
+        "deathCountry": null,
+        "citizenships": [
+            "AUT"
+        ],
+        "motherId": "9",
+        "fatherId": null,
+        "spouseId": "5",
+        "childrenIds": [
+            "3",
+            "12"
+        ]
+    },
+    {
+        "id": "7",
+        "firstName": "Synnöve Agathe",
+        "lastName": "Henriksen",
+        "birthDate": "1928-04-05",
+        "deathDate": "2017-05-16",
+        "birthCountry": "NOR",
+        "residenceCountry": "SWE",
+        "deathCountry": "SWE",
+        "citizenships": [
+            "NOR"
+        ],
+        "motherId": null,
+        "fatherId": null,
+        "spouseId": "8",
+        "childrenIds": [
+            "5",
+            "14"
+        ]
+    },
+    {
+        "id": "8",
+        "firstName": "Andreas Jan Nikolai",
+        "lastName": "Henriksen",
+        "birthDate": "1924-04-29",
+        "deathDate": "2001-01-07",
+        "birthCountry": "NOR",
+        "residenceCountry": "SWE",
+        "deathCountry": "SWE",
+        "citizenships": [
+            "NOR"
+        ],
+        "motherId": null,
+        "fatherId": null,
+        "spouseId": "7",
+        "childrenIds": [
+            "5",
+            "14"
+        ]
+    },
+    {
+        "id": "9",
+        "firstName": "Anna",
+        "lastName": "Rauch",
+        "birthDate": "19??",
+        "deathDate": null,
+        "birthCountry": "AUT",
+        "residenceCountry": "AUT",
+        "deathCountry": "AUT",
+        "citizenships": [
+            "AUT"
+        ],
+        "motherId": null,
+        "fatherId": null,
+        "spouseId": null,
+        "childrenIds": [
+            "6"
+        ]
+    },
+    {
+        "id": "10",
+        "firstName": "Zorica",
+        "lastName": "Cirjakovic",
+        "birthDate": "1952-09-19",
+        "deathDate": null,
+        "birthCountry": "SRB",
+        "residenceCountry": "SRB",
+        "deathCountry": null,
+        "citizenships": [
+            "SRB"
+        ],
+        "motherId": "16",
+        "fatherId": "15",
+        "spouseId": null,
+        "childrenIds": [
+            "4"
+        ]
+    },
+    {
+        "id": "11",
+        "firstName": "Predrag",
+        "lastName": "Cirjakovic",
+        "birthDate": "1953-04-27",
+        "deathDate": null,
+        "birthCountry": "SRB",
+        "residenceCountry": "SRB",
+        "deathCountry": null,
+        "citizenships": [
+            "SRB"
+        ],
+        "motherId": null,
+        "fatherId": null,
+        "spouseId": null,
+        "childrenIds": [
+            "4"
+        ]
+    },
+    {
+        "id": "12",
+        "firstName": "Andrea",
+        "lastName": "Hurra",
+        "birthDate": "1986-04-21",
+        "deathDate": null,
+        "birthCountry": "SWE",
+        "residenceCountry": "ICE",
+        "deathCountry": null,
+        "citizenships": [
+            "SWE"
+        ],
+        "motherId": "5",
+        "fatherId": "6",
+        "spouseId": null,
+        "childrenIds": [
+            "13"
+        ]
+    },
+    {
+        "id": "13",
+        "firstName": "Týr",
+        "lastName": "Hurra",
+        "birthDate": "2025-??",
+        "deathDate": null,
+        "birthCountry": "ICE",
+        "residenceCountry": "ICE",
+        "deathCountry": null,
+        "citizenships": [
+            "ICE"
+        ],
+        "motherId": "12",
+        "fatherId": null,
+        "spouseId": null,
+        "childrenIds": []
+    },
+    {
+        "id": "14",
+        "firstName": "Stefan",
+        "lastName": "Henriksen",
+        "birthDate": "1964-06-20",
+        "deathDate": null,
+        "birthCountry": "SWE",
+        "residenceCountry": "SWE",
+        "deathCountry": null,
+        "citizenships": [
+            "SWE"
+        ],
+        "motherId": "7",
+        "fatherId": "8",
+        "spouseId": null,
+        "childrenIds": []
+    },
+    {
+        "id": "15",
+        "firstName": "Slavko",
+        "lastName": "Davidović",
+        "birthDate": "1920-08-27",
+        "deathDate": "1993-02-14",
+        "birthCountry": "SRB",
+        "residenceCountry": "SRB",
+        "deathCountry": "SRB",
+        "citizenships": [
+            "SRB"
+        ],
+        "motherId": null,
+        "fatherId": null,
+        "spouseId": null,
+        "childrenIds": [
+            "10"
+        ]
+    },
+    {
+        "id": "16",
+        "firstName": "Vera",
+        "lastName": "Davidović",
+        "birthDate": "1921-05-29",
+        "deathDate": "2023-05-09",
+        "birthCountry": "SRB",
+        "residenceCountry": "SRB",
+        "deathCountry": "SRB",
+        "citizenships": [
+            "SRB"
+        ],
+        "motherId": null,
+        "fatherId": null,
+        "spouseId": null,
+        "childrenIds": [
+            "10"
+        ]
+    }
+]

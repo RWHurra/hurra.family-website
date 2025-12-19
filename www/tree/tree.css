@@ -1,0 +1,243 @@
+/* =================================================================
+   1. GRUNDLÄGGANDE RESET & CONTAINER
+   ================================================================= */
+
+.family-tree-container {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: var(--spacing6);
+    padding-bottom: var(--spacing4);
+    position: relative;
+    /* Transition för framtida mjukare sidladdningar */
+    transition: var(--theme-transition);
+}
+
+/* Ta bort punkter och nollställ alla listor i trädet */
+.family-tree-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+/* Vertikal Mittlinje */
+.family-tree-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: var(--border-muted);
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* =================================================================
+   2. GENERATIONSLAYOUT (FLEX & GRID)
+   ================================================================= */
+
+.generation {
+    margin-bottom: var(--spacing4);
+    position: relative;
+    z-index: 1;
+}
+
+.family-units {
+    display: flex;
+    justify-content: space-around;
+    gap: var(--spacing4);
+}
+
+.family-unit {
+    display: flex;
+    gap: var(--spacing2);
+    justify-content: center;
+}
+
+.center-focus-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 100%;
+    align-items: center;
+    gap: var(--spacing2); /* Vi sköter avstånd med padding i kolumnerna */
+}
+
+.context-column {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.center-person-column {
+    display: flex;
+    justify-content: center;
+}
+
+.partner-column {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* =================================================================
+   3. PERSON BOX DESIGN (<person-box>)
+   ================================================================= */
+
+person-box {
+    display: block;
+    background: var(--bg-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px; /* Minimalistisk radie */
+    padding: var(--spacing3);
+    min-width: 200px;
+    max-width: 250px;
+    min-height: 120px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: var(--theme-transition);
+    position: relative;
+}
+
+person-box:hover:not(.is-placeholder):not(.is-center-person) {
+    background-color: var(--highlight);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Inre layout och Animation */
+person-box .box-content {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header: Namn och Flagga */
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing1);
+}
+
+person-box .name {
+    font: var(--p-bold);
+    font-size: 1rem;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+}
+
+.main-flag {
+    font-size: 1.1rem;
+    filter: grayscale(0.2);
+}
+
+/* Detaljer: Datum och Medborgarskap */
+.box-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing2);
+    margin-top: var(--spacing1);
+}
+
+person-box .dates {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.citizenship-bar {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* =================================================================
+   4. SPECIALSTYLES (FOKUS & PLATSHÅLLARE)
+   ================================================================= */
+
+/* Fokus-person */
+.is-center-person {
+    background: var(--primary) !important;
+    border-color: var(--info);
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Mörk text för alla span inuti blå fokus-box */
+.is-center-person .box-content span {
+    color: var(--bg-dark) !important;
+}
+
+.is-center-person .box-details {
+    border-top-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Platshållare */
+person-box.is-placeholder {
+    background: transparent;
+    border: 1px dashed var(--border-muted);
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    box-shadow: none;
+}
+
+.json-schema-container {
+    padding: var(--spacing4);
+    margin-bottom: var(--spacing5);
+    background: var(--bg-light);
+    /* Ljusare bakgrund för att separera från trädet */
+    border: 1px solid var(--border);
+    border-radius: var(--spacing2);
+}
+
+.json-schema-container h2 {
+    color: var(--primary);
+    margin-bottom: var(--spacing4);
+}
+
+.json-schema-container dl,
+.json-schema-container ul {
+    margin: var(--spacing3) 0;
+    padding-left: var(--spacing4);
+    list-style-type: none;
+    /* Ta bort standard-list-bullets */
+}
+
+.json-schema-container dt {
+    font-weight: bold;
+    color: var(--highlight);
+    margin-top: var(--spacing2);
+    border-bottom: 1px dashed var(--border-muted);
+    padding-bottom: var(--spacing1);
+}
+
+.json-schema-container dd {
+    margin-left: var(--spacing3);
+    padding-top: var(--spacing1);
+    color: var(--text-muted);
+}
+
+.json-schema-container .key {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.json-schema-container code {
+    background: var(--bg-dark);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--secondary);
+}
