@@ -4,43 +4,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hurra.family TEST</title>
+    <title>Släktträd - Debug Layout</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
+
+    <style>
+        /* Grundläggande stil för att nollställa listor och ge bakgrund */
+        .family-tree-container {
+            width: 100%;
+            max-width: 1200px;
+            /* Maxbredd för läsbarhet */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        ul.generation {
+            list-style: none;
+            /* Ta bort listmarkörer */
+            padding: 0;
+            margin: 20px 0;
+            background-color: #f7f7f7;
+            /* Ljus bakgrund för generationen */
+            border: 1px solid #ccc;
+            display: flex;
+            /* Använd flexbox för att placera family-units bredvid varandra */
+            justify-content: space-around;
+            /* Sprid ut family-units */
+            gap: 20px;
+        }
+
+        li.family-unit {
+            display: flex;
+            /* Använd flexbox för personerna i en enhet */
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #999;
+        }
+
+        .person {
+            background-color: white;
+            border: 1px solid #333;
+            padding: 15px 25px;
+            margin: 5px;
+            text-align: center;
+            min-width: 120px;
+            /* Minsta bredd för boxarna */
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        /* Ge den fokuserade personen en särskild stil */
+        .person.person-in-focus {
+            background-color: #e0f7fa;
+            /* Tydligare bakgrundsfärg */
+            border: 2px solid #00bcd4;
+            font-weight: bold;
+        }
+
+        .person.person-partner {
+            justify-self: left;
+        }
+
+        .person.filler {
+            background-color: transparent;
+            /* Osynlig bakgrund */
+            border: black 2px solid;
+            /* Osynlig kant */
+            padding: 0;
+            margin: 0;
+            min-width: 0px;
+            height: 50px;
+
+            /* **NYCKELN FÖR CENTRERING:** Fillern tar upp utrymmet till vänster */
+            flex-grow: auto;
+
+            /* Lägg till max-bredd för att simulera den tomma platsen till höger
+       och trycka Fokuspersonen till mitten. Justera detta värde. */
+            /* max-width: 500px; */
+        }
+
+        /* Stil för att hantera den fokuserade generationen */
+        ul.generation.in-focus {
+            /* Vi låter den fokuserade generationen ta all bredd och centrera innehållet */
+            /* background-color: magenta; */
+            display: flex;
+            justify-content: center;
+        }
+
+        li.family-unit.focused-unit {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            /* Family unit som innehåller den fokuserade personen */
+            margin: 0;
+            /* Ta bort yttre marginaler för att underlätta centrering */
+            border: none;
+            padding: 0;
+            width: 100%;
+                /* justify-content: center; */
+        }
+    </style>
 </head>
 
-<body data-current-lang="sv">
-    <script src="/components/header.js" defer></script>
-    <script src="/components/footer.js" defer></script>
-    <script src="/components/hero.js" defer></script>
-    <script src="/components/theme-toggle.js" defer></script>
-    <script src="/components/language-toggle.js" defer></script>
-
-    <t-header> </t-header>
-
-    <language-toggle default-lang="sv"></language-toggle>
-
-    <t-hero>
-        <h1 slot="hero-title">detta är en test-sida</h1>
-        <h2 slot="hero-heading">just nu testar jag dark/light toggle</h2>
-
-        <p slot="hero-body" lang="sv" class="i18n">jag försöker implementera funktionalitet för att toggla mellan ljust och mörkt läge</p>
-        <p slot="hero-body" lang="en"class="i18n">I am trying to implement functionality to toggle between light and dark mode</p>
-        <p slot="hero-body" lang="sr" class="i18n">Pokušavam da implementiram funkcionalnost za prebacivanje između svetlog i tamnog režima</p>
-
-        <a slot="hero-action" href="#" class="cta cta-primary">toggle</a>
-        <a slot="hero-action" href="#" class="cta cta-secondary">-</a>
-    </t-hero>
-
-    <t-footer> </t-footer>
-
-    <link rel="stylesheet" href="/components/footer.css">
+<body>
 
 
+    <div class="family-tree-container">
+        <ul class="generation grandparents">
+            <li class="family-unit">
+                <div class="person">person (morfar)</div>
+                <div class="person">person (mormor)</div>
+            </li>
+            <li class="family-unit">
+                <div class="person">person (farfar)</div>
+                <div class="person">person (farmor)</div>
+            </li>
+        </ul>
 
+        <ul class="generation parents">
+            <li class="family-unit">
+                <div class="person">person (förälder 1)</div>
+            </li>
+            <li class="family-unit">
+                <div class="person">person (förälder 2)</div>
+            </li>
+        </ul>
+
+        <ul class="generation in-focus">
+            <li class="family-unit focused-unit">
+                <div class="person filler"></div>
+                <div class="person person-in-focus">person in focus</div>
+                <div class="person person-partner">person partner</div>
+            </li>
+        </ul>
+
+        <ul class="generation children">
+            <li class="family-unit">
+                <div class="person">person (barn 1)</div>
+                <div class="person">person (barn 2)</div>
+                <div class="person">person (barn 3)</div>
+            </li>
+        </ul>
+    </div>
 
 
 </body>

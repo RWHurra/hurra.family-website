@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Släktträd - Centrerad Fokusperson (FINAL KORRIGERING)</title>
+    <style>
+        /* ... (Grundstilar oförändrade) ... */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+        }
+
+        .family-tree-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        .family-tree-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1px;
+            height: 100%;
+            background-color: red;
+            z-index: 10;
+        }
+
+        ul.generation {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        li.family-unit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #999;
+        }
+
+        .person {
+            background-color: white;
+            border: 1px solid #333;
+            padding: 15px 25px;
+            margin: 5px;
+            /* Denna generaliserade marginal kan skapa problem */
+            min-width: 120px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            white-space: nowrap;
+        }
+
+        /* ------------------------------------------------ */
+        /* FINAL KORRIGERAD CSS STARTAR HÄR */
+        /* ------------------------------------------------ */
+
+        ul.generation.in-focus {
+            display: flex;
+            justify-content: center;
+        }
+
+        li.family-unit.focused-unit {
+            /* Återställs till en enkel Flex-container som täcker 100% bredd */
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            margin: 0;
+            border: none;
+            padding: 0;
+        }
+
+        .person-pair {
+            display: flex;
+            /* align-items: right; */
+            /* justify-content: center; */
+
+            /* NYCKELSTEG A: Positionera paret till 50% */
+            position: relative;
+            left: 50%;
+        }
+
+        .person.person-in-focus {
+            /* NYCKELSTEG B: Drag tillbaka paret med 50% av egen bredd. */
+            transform: translateX(-50%);
+
+            /* MYCKET VIKTIGT: Kontrollera marginalerna för att säkerställa att Partnern ansluter. */
+            /* Ta bort den generella margin: 5px från .person för detta element, och sätt noll marginal till höger */
+            margin: 5px 0 5px 5px;
+            /* Top 5, Right 0, Bottom 5, Left 5 */
+
+            /* Stil */
+            background-color: #e0f7fa;
+            border: 2px solid #00bcd4;
+            font-weight: bold;
+        }
+
+        .person.person-partner {
+            background-color: #ffe0b2;
+            border: 2px solid #ff9800;
+            /* MYCKET VIKTIGT: Ingen marginal till vänster, annars separeras den. */
+            margin: 5px 5px 5px 0;
+            /* Top 5, Right 5, Bottom 5, Left 0 */
+        }
+
+        /* ------------------------------------------------ */
+        /* FINAL KORRIGERAD CSS SLUTAR HÄR */
+        /* ------------------------------------------------ */
+    </style>
+</head>
+
+<body>
+    <div class="family-tree-container">
+
+        <ul class="generation grandparents">
+            <li class="family-unit">
+                <div class="person">person A (morfar, bred)</div>
+                <div class="person">person B (mormor)</div>
+            </li>
+            <li class="family-unit">
+                <div class="person">person C (farfar)</div>
+                <div class="person">person D (farmor, smal)</div>
+            </li>
+        </ul>
+
+        <ul class="generation parents">
+            <li class="family-unit">
+                <div class="person" style="min-width: 200px;">Förälder 1 (Extra bred)</div>
+            </li>
+            <li class="family-unit">
+                <div class="person">Förälder 2</div>
+            </li>
+        </ul>
+
+        <ul class="generation in-focus">
+            <li class="family-unit focused-unit">
+                <div class="person-pair">
+                    <div class="person person-in-focus" style="min-width: 300px;">FOKUSERAD PERSON (Mittpunkten ska
+                        ligga på den röda linjen)</div>
+                    <div class="person person-partner" style="min-width: 100px;">PARTNER (Ansluter till höger)</div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="generation children">
+            <li class="family-unit">
+                <div class="person">Barn 1</div>
+                <div class="person">Barn 2</div>
+                <div class="person">Barn 3 (Extra lång text)</div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
